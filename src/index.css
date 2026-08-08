@@ -1,0 +1,294 @@
+/* ==========================================================================
+   AU JARDIN DES ANGES — DESIGN SYSTEM & STYLES
+   Color Palette (Strict Compliance):
+   - Beige crème:   #E7E0DA (fond principal)
+   - Blanc cassé:   #F8F5F1 (fond secondaire / cartes)
+   - Taupe foncé:   #5C524E (texte principal)
+   - Vert sauge:    #BFC5AF (feuillages, accents éveil)
+   - Vert olive:    #7D826C (accents éveil foncé)
+   - Rose poudré:   #E8B7B5 (accents douceur)
+   - Bleu ciel:     #D5DEE6 (accents tout-petits)
+   - Doré doux:     #D6B06B (étoiles, halos, séparateurs)
+   ========================================================================== */
+
+:root {
+  --bg-primary: #E7E0DA;
+  --bg-card: #F8F5F1;
+  --text-main: #5C524E;
+  --text-muted: #7A6F6A;
+  --green-sage: #BFC5AF;
+  --green-olive: #7D826C;
+  --rose-powder: #E8B7B5;
+  --rose-dark: #C98B89;
+  --blue-sky: #D5DEE6;
+  --blue-sky-dark: #8EABC2;
+  --gold-soft: #D6B06B;
+  --gold-light: #F4E8C1;
+  --border-light: rgba(92, 82, 78, 0.12);
+  --border-gold: rgba(214, 176, 107, 0.35);
+
+  --font-title: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-soft: 0 10px 30px -5px rgba(92, 82, 78, 0.07);
+  --shadow-hover: 0 18px 40px -8px rgba(92, 82, 78, 0.14);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+p {
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+
+/* Accessibility focus ring */
+:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Badges & Section Pills */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  background-color: rgba(248, 245, 241, 0.85);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--green-olive);
+  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.04);
+}
+
+@media (max-width: 480px) {
+  .section-badge {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.85rem;
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+}
+
+@media (max-width: 640px) {
+  .section-header {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.section-title {
+  font-size: 2.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-align: center;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(92, 82, 78, 0.08);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.8rem 1.25rem;
+    font-size: 0.92rem;
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  background-color: var(--green-olive);
+  color: #FFFFFF;
+  border-color: var(--green-olive);
+}
+
+.btn-primary:hover {
+  background-color: #6a6f5b;
+  border-color: #6a6f5b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(125, 130, 108, 0.35);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border-color: var(--green-olive);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(125, 130, 108, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(92, 82, 78, 0.1);
+}
+
+.btn-gold {
+  background-color: var(--gold-soft);
+  color: #FFFFFF;
+  border-color: var(--gold-soft);
+}
+
+.btn-gold:hover {
+  background-color: #c49f5a;
+  border-color: #c49f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(214, 176, 107, 0.4);
+}
+
+/* Card Base */
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+@media (max-width: 640px) {
+  .card {
+    border-radius: var(--radius-md);
+  }
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-sage);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-olive);
+}

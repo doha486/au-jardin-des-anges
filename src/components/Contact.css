@@ -1,0 +1,238 @@
+.contact-section {
+  padding: 4.5rem 0 3rem 0;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.primary-contact-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F5F1 100%);
+  border: 1px solid var(--border-gold);
+}
+
+.phone-badge-wrapper {
+  margin-bottom: 1.2rem;
+}
+
+.phone-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--green-olive);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(125, 130, 108, 0.3);
+  margin: 0 auto;
+}
+
+.contact-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--green-olive);
+  margin-bottom: 0.5rem;
+}
+
+.phone-display-link {
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+@media (min-width: 640px) {
+  .phone-display-link {
+    font-size: 3.4rem;
+  }
+}
+
+.phone-display-link:hover {
+  color: var(--green-olive);
+}
+
+.phone-subtext {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 550px) {
+  .contact-cta-buttons {
+    flex-direction: row;
+  }
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 0.95rem 1.4rem;
+}
+
+/* Contact Instagram Box */
+.contact-instagram-box {
+  width: 100%;
+  max-width: 440px;
+}
+
+.contact-ig-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.contact-ig-link:hover {
+  background-color: #FFFFFF;
+  border-color: #E1306C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(225, 48, 108, 0.12);
+}
+
+.ig-handle-text {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.ig-subtext {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.ig-external-icon {
+  margin-left: auto;
+  color: var(--text-muted);
+}
+
+/* Map Action Card */
+.map-action-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-gold);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+}
+
+.map-badge-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--green-olive);
+  margin-bottom: 0.35rem;
+}
+
+.map-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.map-btn {
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Info Card */
+.info-card {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-card-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  color: var(--text-main);
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-item-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-main);
+}
+
+.info-item-text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.location-preview-box {
+  background-color: var(--bg-primary);
+  border: 1px dashed var(--border-gold);
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--green-olive);
+}
+
+.contact-separator {
+  margin-top: 2rem;
+}

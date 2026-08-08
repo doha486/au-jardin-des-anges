@@ -1,0 +1,295 @@
+.seveiller-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-card);
+  position: relative;
+}
+
+/* Workshop Notice Pill */
+.workshop-notice-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1.35rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  color: var(--text-main);
+  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.05);
+  margin-top: 1rem;
+}
+
+.notice-icon {
+  color: var(--green-olive);
+  flex-shrink: 0;
+}
+
+/* Workshops Grid */
+.workshops-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .workshops-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .workshops-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+.workshop-card {
+  padding: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.workshop-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.workshop-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.06);
+}
+
+.workshop-cat-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  background-color: var(--bg-primary);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.workshop-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+}
+
+.workshop-summary {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.workshop-action {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--green-olive);
+  transition: gap var(--transition-fast);
+}
+
+.workshop-card:hover .workshop-action {
+  gap: 0.75rem;
+  color: #5c604e;
+}
+
+/* Summer Camp Special Card */
+.summer-camp-card {
+  background: linear-gradient(135deg, #FFFDF9 0%, #F8F5F1 100%);
+  border: 1.5px dashed var(--border-gold);
+  position: relative;
+}
+
+.summer-camp-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.summer-badge-coming {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background-color: var(--gold-light);
+  border: 1px solid var(--border-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #8C6A28;
+  letter-spacing: 0.04em;
+}
+
+.summer-icon-bg {
+  background-color: #FDF6E3;
+}
+
+.summer-title {
+  color: var(--text-main);
+}
+
+.summer-summary {
+  color: var(--text-muted);
+}
+
+.summer-footer-badge {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-olive);
+  background-color: var(--bg-primary);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Modal */
+.workshop-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(92, 82, 78, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.workshop-modal-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2rem;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-gold);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--bg-primary);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: background-color var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--rose-powder);
+}
+
+.modal-top {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-icon-bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-cat {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--green-olive);
+  letter-spacing: 0.08em;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+}
+
+.modal-details {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.modal-benefits-box {
+  background-color: #FFFFFF;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.5rem;
+}
+
+.benefits-heading {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green-olive);
+  margin-bottom: 0.75rem;
+}
+
+.modal-benefits-box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-benefits-box li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.check-icon {
+  color: var(--green-olive);
+  flex-shrink: 0;
+}
+
+.modal-footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px dashed var(--border-light);
+  padding-top: 1rem;
+}
