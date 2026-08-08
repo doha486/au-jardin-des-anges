@@ -14,6 +14,17 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: 'Grandir', href: '#grandir', subtitle: 'Nos 2 forfaits' },
     { name: 'S\'éveiller', href: '#seveiller', subtitle: 'Les ateliers & Summer Camp' },
@@ -52,7 +63,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Header Action Icon Circles (Colored: Instagram Mauve, WhatsApp Green, Email White) */}
+        {/* Header Action Icon Circles (Instagram, WhatsApp, Email) */}
         <div className="header-actions">
           <a 
             href={instagramUrl}
@@ -97,7 +108,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu — Fixed Overlay with Backdrop Tap & Close Cross */}
+      {/* Mobile Drawer Menu — Fixed Non-Moving Panel */}
       <div 
         className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
         onClick={() => setMobileMenuOpen(false)}
@@ -106,7 +117,7 @@ export default function Header() {
           className="mobile-drawer-content"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Mobile Drawer Header with Close Cross Button */}
+          {/* Fixed Drawer Header with Title & Close Cross Button */}
           <div className="mobile-header-logo">
             <div>
               <p className="mobile-brand-name">AU JARDIN DES ANGES</p>
@@ -121,6 +132,7 @@ export default function Header() {
             </button>
           </div>
 
+          {/* Middle Scrollable Section for Navigation Links */}
           <nav className="mobile-nav">
             <ul>
               {navLinks.map((link) => (
@@ -138,6 +150,7 @@ export default function Header() {
             </ul>
           </nav>
 
+          {/* Bottom Fixed Action CTA Buttons */}
           <div className="mobile-drawer-cta">
             <a 
               href={whatsappUrl} 
