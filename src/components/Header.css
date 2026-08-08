@@ -58,7 +58,7 @@
 
 @media (max-width: 380px) {
   .brand-title {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     letter-spacing: 0.04em;
   }
 }
@@ -129,16 +129,17 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .header-actions {
-    gap: 0.4rem;
+    gap: 0.35rem;
   }
 }
 
+/* Uniform Circular Icon Buttons (Instagram, WhatsApp, Email) */
 .btn-social-icon {
   display: flex;
   align-items: center;
@@ -151,90 +152,35 @@
   border: 1px solid var(--border-light);
   transition: all var(--transition-fast);
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(92, 82, 78, 0.05);
+}
+
+@media (max-width: 380px) {
+  .btn-social-icon {
+    width: 33px;
+    height: 33px;
+  }
 }
 
 .btn-social-icon:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.12);
+  background-color: #FFFFFF;
+}
+
+.btn-social-ig:hover {
   color: #E1306C;
   border-color: #E1306C;
-  background-color: #FFFFFF;
-  transform: translateY(-1px);
 }
 
-/* WhatsApp & Email buttons in Header */
-.btn-whatsapp-header {
-  background-color: #25D366;
-  color: #FFFFFF;
-  font-size: 0.85rem;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  transition: all var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
-  white-space: nowrap;
-  border: none;
+.btn-social-wa:hover {
+  color: #25D366;
+  border-color: #25D366;
 }
 
-.btn-whatsapp-header:hover {
-  background-color: #20bd5a;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
-}
-
-.btn-email-header {
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  border: 1.5px solid var(--green-olive);
-  font-size: 0.85rem;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  transition: all var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.05);
-  white-space: nowrap;
-}
-
-.btn-email-header:hover {
-  background-color: var(--green-olive);
-  color: #FFFFFF;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(125, 130, 108, 0.25);
-}
-
-/* On Mobile Phones (< 640px): Convert WhatsApp & Email to small circular icon buttons */
-@media (max-width: 640px) {
-  .header-btn-text {
-    display: none; /* Hide button text on mobile phone screens */
-  }
-
-  .btn-whatsapp-header {
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    min-width: 36px;
-    min-height: 36px;
-    flex-shrink: 0;
-  }
-
-  .btn-email-header {
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    min-width: 36px;
-    min-height: 36px;
-    flex-shrink: 0;
-  }
+.btn-social-mail:hover {
+  color: var(--green-olive);
+  border-color: var(--green-olive);
 }
 
 .mobile-toggle {

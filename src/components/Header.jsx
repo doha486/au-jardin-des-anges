@@ -31,7 +31,7 @@ export default function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         
-        {/* Brand Name Only — Clean & Prominent */}
+        {/* Brand Name Only — Clean & Spacious */}
         <a href="#" className="brand-link" aria-label="Au jardin des anges - Accueil">
           <div className="brand-text">
             <span className="brand-title">AU JARDIN DES ANGES</span>
@@ -52,13 +52,13 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Actions Desktop & Mobile Header Icons */}
+        {/* Header Action Icon Circles (Instagram, WhatsApp, Email) */}
         <div className="header-actions">
           <a 
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-social-icon"
+            className="btn-social-icon btn-social-ig"
             title="Suivez-nous sur Instagram"
             aria-label="Instagram Au Jardin des Anges"
           >
@@ -69,22 +69,20 @@ export default function Header() {
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn btn-whatsapp-header"
+            className="btn-social-icon btn-social-wa"
             title="Discuter directement sur WhatsApp"
             aria-label="Discuter sur WhatsApp"
           >
             <MessageCircle size={18} />
-            <span className="header-btn-text">WhatsApp</span>
           </a>
 
           <a 
             href={mailtoUrl}
-            className="btn btn-email-header"
+            className="btn-social-icon btn-social-mail"
             title="Nous écrire par email"
             aria-label="Nous écrire par email"
           >
             <Mail size={18} />
-            <span className="header-btn-text">Email</span>
           </a>
 
           {/* Mobile Menu Toggle Button */}
