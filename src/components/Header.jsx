@@ -14,15 +14,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [mobileMenuOpen]);
-
   const navLinks = [
     { name: 'Grandir', href: '#grandir', subtitle: 'Nos 2 forfaits' },
     { name: 'S\'éveiller', href: '#seveiller', subtitle: 'Les ateliers & Summer Camp' },
@@ -61,13 +52,13 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Header Action Icon Circles (Instagram, WhatsApp, Email) */}
+        {/* Header Action Icon Circles (Colored: Instagram Mauve, WhatsApp Green, Email White) */}
         <div className="header-actions">
           <a 
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-social-icon btn-social-ig"
+            className="btn-header-circle btn-header-insta"
             title="Suivez-nous sur Instagram"
             aria-label="Instagram Au Jardin des Anges"
           >
@@ -78,7 +69,7 @@ export default function Header() {
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn-social-icon btn-social-wa"
+            className="btn-header-circle btn-header-wtsp"
             title="Discuter directement sur WhatsApp"
             aria-label="Discuter sur WhatsApp"
           >
@@ -87,7 +78,7 @@ export default function Header() {
 
           <a 
             href={mailtoUrl}
-            className="btn-social-icon btn-social-mail"
+            className="btn-header-circle btn-header-email"
             title="Nous écrire par email"
             aria-label="Nous écrire par email"
           >
@@ -106,7 +97,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu — Fixed Overlay with Backdrop Tap & Close Cross */}
       <div 
         className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
         onClick={() => setMobileMenuOpen(false)}
@@ -119,7 +110,7 @@ export default function Header() {
           <div className="mobile-header-logo">
             <div>
               <p className="mobile-brand-name">AU JARDIN DES ANGES</p>
-              <p className="mobile-brand-sub">Crèche & Pouponnière · 3m à 4ans</p>
+              <p className="mobile-brand-sub">Crèche & Pouponnière · 3 mois à 4 ans</p>
             </div>
             <button 
               className="mobile-drawer-close-btn"

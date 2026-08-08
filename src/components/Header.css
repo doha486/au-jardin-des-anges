@@ -139,48 +139,67 @@
   }
 }
 
-/* Uniform Circular Icon Buttons (Instagram, WhatsApp, Email) */
-.btn-social-icon {
+/* Header Circle Action Buttons */
+.btn-header-circle {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  border: 1px solid var(--border-light);
   transition: all var(--transition-fast);
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(92, 82, 78, 0.05);
+  box-shadow: 0 2px 8px rgba(92, 82, 78, 0.08);
 }
 
 @media (max-width: 380px) {
-  .btn-social-icon {
+  .btn-header-circle {
     width: 33px;
     height: 33px;
   }
 }
 
-.btn-social-icon:hover {
+/* WhatsApp Icon Circle — Green */
+.btn-header-wtsp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: 1px solid #20BD5A;
+}
+
+.btn-header-wtsp:hover {
+  background-color: #20BD5A;
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.12);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Email Icon Circle — White */
+.btn-header-email {
   background-color: #FFFFFF;
+  color: var(--text-main);
+  border: 1.5px solid var(--border-gold);
 }
 
-.btn-social-ig:hover {
-  color: #E1306C;
-  border-color: #E1306C;
-}
-
-.btn-social-wa:hover {
-  color: #25D366;
-  border-color: #25D366;
-}
-
-.btn-social-mail:hover {
+.btn-header-email:hover {
+  background-color: var(--bg-card);
   color: var(--green-olive);
   border-color: var(--green-olive);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(92, 82, 78, 0.12);
+}
+
+/* Instagram Icon Circle — Light Mauve */
+.btn-header-insta {
+  background-color: #F4E8F8;
+  color: #C050B3;
+  border: 1px solid #E4C6EB;
+}
+
+.btn-header-insta:hover {
+  background-color: #EEDCF0;
+  color: #E1306C;
+  border-color: #E1306C;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(225, 48, 108, 0.2);
 }
 
 .mobile-toggle {
