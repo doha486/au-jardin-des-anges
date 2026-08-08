@@ -14,6 +14,15 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: 'Grandir', href: '#grandir', subtitle: 'Nos 2 forfaits' },
     { name: 'S\'éveiller', href: '#seveiller', subtitle: 'Les ateliers & Summer Camp' },
@@ -98,13 +107,27 @@ export default function Header() {
       </div>
 
       {/* Mobile Drawer Menu */}
-      <div className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-drawer-content">
+      <div 
+        className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        <div 
+          className="mobile-drawer-content"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Mobile Drawer Header with Close Cross Button */}
           <div className="mobile-header-logo">
             <div>
               <p className="mobile-brand-name">AU JARDIN DES ANGES</p>
-              <p className="mobile-brand-sub">Crèche & Pouponnière · 3 mois à 4 ans</p>
+              <p className="mobile-brand-sub">Crèche & Pouponnière · 3m à 4ans</p>
             </div>
+            <button 
+              className="mobile-drawer-close-btn"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Fermer le menu"
+            >
+              <X size={20} />
+            </button>
           </div>
 
           <nav className="mobile-nav">
