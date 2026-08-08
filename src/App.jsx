@@ -8,6 +8,7 @@ import Silluminer from './components/Silluminer';
 import Visites from './components/Visites';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingActions from './components/FloatingActions';
 import FloralSeparator from './components/FloralSeparator';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <FloatingActions />
     </div>
   );
 }
