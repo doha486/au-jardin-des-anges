@@ -4,7 +4,7 @@
   position: relative;
 }
 
-/* Feature Oak Banner — Compact & Perfectly Proportioned on PC */
+/* Feature Oak Banner — Full Chair Image Visible */
 .oak-feature-banner {
   display: flex;
   flex-direction: column;
@@ -20,23 +20,24 @@
   .oak-feature-banner {
     flex-direction: row;
     align-items: stretch;
-    max-height: 360px;
+    min-height: 380px;
   }
 }
 
 .oak-banner-img-wrap {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 280px;
   cursor: pointer;
   overflow: hidden;
+  background-color: #E7E0DA;
 }
 
 @media (min-width: 860px) {
   .oak-banner-img-wrap {
-    width: 38%;
-    height: 100%;
-    max-height: 360px;
+    width: 44%;
+    height: auto;
+    min-height: 380px;
   }
 }
 
@@ -44,11 +45,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: bottom center;
   transition: transform var(--transition-normal);
 }
 
 .oak-banner-img-wrap:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .img-overlay {
@@ -67,7 +69,7 @@
 }
 
 .oak-banner-content {
-  padding: 1.25rem 1.2rem;
+  padding: 1.5rem 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +78,7 @@
 
 @media (min-width: 860px) {
   .oak-banner-content {
-    padding: 1.5rem 2rem;
+    padding: 2rem 2.2rem;
   }
 }
 
@@ -91,32 +93,32 @@
   font-size: 0.82rem;
   font-weight: 700;
   color: #8C6A28;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   align-self: flex-start;
 }
 
 .oak-banner-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--text-main);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 @media (min-width: 860px) {
   .oak-banner-title {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 }
 
 .oak-quote {
   font-family: var(--font-title);
-  font-size: 1.05rem;
-  line-height: 1.5;
+  font-size: 1.08rem;
+  line-height: 1.55;
   color: var(--text-main);
   background-color: rgba(255, 255, 255, 0.85);
-  padding: 0.85rem 1.1rem;
+  padding: 0.9rem 1.15rem;
   border-left: 4px solid var(--gold-soft);
   border-radius: var(--radius-sm);
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
   font-style: italic;
 }
 
@@ -136,7 +138,7 @@
 .oak-tag-pill {
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.25rem 0.7rem;
+  padding: 0.28rem 0.75rem;
   background-color: #FFFFFF;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-full);
