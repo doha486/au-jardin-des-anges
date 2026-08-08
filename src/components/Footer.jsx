@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Heart, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Heart, Instagram, ChevronRight, MessageCircle } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -18,15 +18,37 @@ export default function Footer() {
           <h3 className="footer-brand-title">AU JARDIN DES ANGES</h3>
           <p className="footer-brand-sub">Crèche & Pouponnière Privée · 3 mois à 4 ans</p>
           <p className="footer-slogan">« Grandir • S'éveiller • S'illuminer »</p>
+          <p className="footer-desc">
+            Un havre de paix dédié à la petite enfance. Sécurité affective, éveil sensoriel et bienveillance au quotidien.
+          </p>
           
           <div className="footer-social-links">
-            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Instagram">
+            <a 
+              href={instagramUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="footer-social-btn btn-insta" 
+              title="Suivez-nous sur Instagram"
+              aria-label="Instagram"
+            >
               <Instagram size={18} />
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="WhatsApp">
-              <Phone size={18} />
+            <a 
+              href={whatsappUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="footer-social-btn btn-wa" 
+              title="Discuter sur WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={18} />
             </a>
-            <a href={mailtoUrl} className="footer-social-btn" aria-label="Email">
+            <a 
+              href={mailtoUrl} 
+              className="footer-social-btn btn-mail" 
+              title="Nous écrire par email"
+              aria-label="Email"
+            >
               <Mail size={18} />
             </a>
           </div>
@@ -34,32 +56,70 @@ export default function Footer() {
 
         {/* Quick Links Column */}
         <div className="footer-col links-col">
-          <h4 className="footer-col-title">Navigation</h4>
+          <h4 className="footer-col-title">Navigation Rapide</h4>
           <ul className="footer-links-list">
-            <li><a href="#grandir">Nos 4 Sections d'Âge</a></li>
-            <li><a href="#seveiller">Ateliers & Summer Camp</a></li>
-            <li><a href="#galerie">Galerie & Mobilier Chêne</a></li>
-            <li><a href="#silluminer">Nos Valeurs</a></li>
-            <li><a href="#visites">Heures de Visite</a></li>
-            <li><a href="#contact">Nous Trouver</a></li>
+            <li>
+              <a href="#grandir">
+                <ChevronRight size={14} className="link-arrow" />
+                <span>Nos 4 Sections d'Âge</span>
+              </a>
+            </li>
+            <li>
+              <a href="#seveiller">
+                <ChevronRight size={14} className="link-arrow" />
+                <span>Ateliers & Summer Camp</span>
+              </a>
+            </li>
+            <li>
+              <a href="#galerie">
+                <ChevronRight size={14} className="link-arrow" />
+                <span>Galerie & Mobilier Chêne</span>
+              </a>
+            </li>
+            <li>
+              <a href="#silluminer">
+                <ChevronRight size={14} className="link-arrow" />
+                <span>Nos Valeurs & Philosophie</span>
+              </a>
+            </li>
+            <li>
+              <a href="#visites">
+                <ChevronRight size={14} className="link-arrow" />
+                <span>Heures de Visite sur RDV</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <ChevronRight size={14} className="link-arrow" />
+                <span>Nous Trouver sur la Carte</span>
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Contact Info Column */}
         <div className="footer-col contact-col">
-          <h4 className="footer-col-title">Contact</h4>
+          <h4 className="footer-col-title">Contact Direct</h4>
           <ul className="footer-contact-list">
             <li>
-              <Phone size={16} className="contact-icon" />
+              <div className="contact-icon-pill">
+                <Phone size={16} />
+              </div>
               <a href="tel:+212628681664">+212 6 28 68 16 64</a>
             </li>
             <li>
-              <Mail size={16} className="contact-icon" />
+              <div className="contact-icon-pill">
+                <Mail size={16} />
+              </div>
               <a href={mailtoUrl}>aujardindesangescreche@gmail.com</a>
             </li>
             <li>
-              <MapPin size={16} className="contact-icon" />
-              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">Au jardin des anges (Google Maps)</a>
+              <div className="contact-icon-pill">
+                <MapPin size={16} />
+              </div>
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+                Au jardin des anges (Google Maps)
+              </a>
             </li>
           </ul>
         </div>
@@ -69,7 +129,9 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container bottom-container">
           <p>© {currentYear} Au jardin des anges — Crèche & Pouponnière Privée. Tous droits réservés.</p>
-          <p className="footer-heart">Fait avec <Heart size={14} color="#E8B7B5" fill="#E8B7B5" /> pour l'épanouissement des tout-petits.</p>
+          <p className="footer-heart">
+            Fait avec <Heart size={14} color="#E8B7B5" fill="#E8B7B5" /> pour l'épanouissement des tout-petits.
+          </p>
         </div>
       </div>
     </footer>
