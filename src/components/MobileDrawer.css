@@ -1,0 +1,150 @@
+/* Mobile Drawer Overlay & Panel — Standalone Fixed Viewport Component */
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(92, 82, 78, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+  overflow: hidden;
+}
+
+.mobile-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 86%;
+  max-width: 330px;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  background-color: var(--bg-card);
+  padding: 1.1rem 1rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  overflow: hidden;
+  z-index: 100000;
+}
+
+.mobile-drawer-overlay.open .mobile-drawer-panel {
+  transform: translateX(0);
+}
+
+/* Panel Header with Close Cross Button (Fixed at top) */
+.drawer-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+  background-color: var(--bg-card);
+}
+
+.drawer-brand-name {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.98rem;
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+.drawer-brand-sub {
+  font-size: 0.75rem;
+  color: var(--green-olive);
+  margin-top: 0.1rem;
+}
+
+.drawer-close-btn {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.drawer-close-btn:hover {
+  background-color: var(--rose-powder);
+  border-color: var(--rose-powder);
+}
+
+/* Middle Navigation Links (Scrollable if screen short) */
+.drawer-nav {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 0.75rem;
+  padding-right: 0.2rem;
+}
+
+.drawer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.drawer-nav-link {
+  display: flex;
+  flex-direction: column;
+  padding: 0.55rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color var(--transition-fast);
+}
+
+.drawer-nav-link:hover {
+  background-color: var(--blue-sky);
+}
+
+.nav-link-title {
+  font-weight: 700;
+}
+
+.nav-link-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Fixed Bottom Action CTA Buttons */
+.drawer-panel-cta {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex-shrink: 0;
+  background-color: var(--bg-card);
+}
