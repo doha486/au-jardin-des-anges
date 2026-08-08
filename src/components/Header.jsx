@@ -16,7 +16,7 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'Grandir', href: '#grandir', subtitle: 'Nos 2 forfaits' },
+    { name: 'Grandir', href: '#grandir', subtitle: 'Nos 4 sections' },
     { name: 'S\'éveiller', href: '#seveiller', subtitle: 'Les ateliers & Summer Camp' },
     { name: 'Galerie', href: '#galerie', subtitle: 'Photos & mobilier' },
     { name: 'S\'illuminer', href: '#silluminer', subtitle: 'Nos valeurs' },
@@ -37,7 +37,7 @@ export default function Header() {
           <a href="#" className="brand-link" aria-label="Au jardin des anges - Accueil">
             <div className="brand-text">
               <span className="brand-title">AU JARDIN DES ANGES</span>
-              <span className="brand-subtitle">Crèche & Pouponnière</span>
+              <span className="brand-subtitle">Crèche & Pouponnière Privée</span>
             </div>
           </a>
 
@@ -100,7 +100,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Standalone Mobile Drawer — Rendered outside <header> to fix containing block bug */}
+      {/* Standalone Mobile Drawer */}
       <MobileDrawer 
         isOpen={mobileMenuOpen} 
         onClose={() => setMobileMenuOpen(false)} 

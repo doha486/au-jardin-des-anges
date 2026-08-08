@@ -10,8 +10,8 @@ export default function Gallery() {
       id: 'oak-chair',
       src: '/gallery/oak-chair.jpg',
       title: 'Mobilier en Chêne Massif',
-      subtitle: 'Des matériaux nobles, naturels & durables',
-      description: 'Au Jardin des Anges, nous avons choisi le chêne massif, des matériaux nobles, naturels et durables, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽',
+      subtitle: 'Matériau noble & naturel',
+      description: 'À Au Jardin des Anges, nous avons choisi le chêne massif, un matériau noble, naturel et durable, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽',
       isFeature: true,
       tag: 'Qualité & Bien-être'
     },
@@ -27,20 +27,11 @@ export default function Gallery() {
     {
       id: 'drawings-1',
       src: '/gallery/wall-drawings-1.jpg',
-      title: 'Illustrations Murales — Montgolfière & Fusée',
-      subtitle: 'Éveil à l’imaginaire',
-      description: 'Des illustrations délicates réalisées à la main sur les murs de la crèche : montgolfière, petite fusée, abeille et fleurs champêtres.',
+      title: 'Illustrations Murales Fait-Main',
+      subtitle: 'Fusain & Peinture Écologique',
+      description: 'Des illustrations poétiques réalisées à la main sur les murs de la crèche (montgolfière, petite fusée, abeille et fleurs). Les dessins sont réalisés avec du fusain et de la peinture écologique non nocive pour les enfants. 🎨🌿',
       isFeature: false,
-      tag: 'Décoration Fait-Main'
-    },
-    {
-      id: 'drawings-2',
-      src: '/gallery/wall-drawings-2.jpg',
-      title: 'Illustrations Murales — Cerf-Volant & Étoiles',
-      subtitle: 'Douceur graphique',
-      description: 'Un univers graphique poétique avec cerf-volant, coccinelle, glace gourmande, petite voiture et étoiles pour faire rêver les enfants.',
-      isFeature: false,
-      tag: 'Univers Poétique'
+      tag: 'Décoration Écologique'
     }
   ];
 
@@ -80,7 +71,7 @@ export default function Gallery() {
             <h3 className="oak-banner-title">Un Mobilier Chaleureux & Durable</h3>
 
             <blockquote className="oak-quote">
-              « Au Jardin des Anges, nous avons choisi le <strong>chêne massif</strong>, des matériaux nobles, naturels et durables, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽 »
+              « À Au Jardin des Anges, nous avons choisi le <strong>chêne massif</strong>, un matériau noble, naturel et durable, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽 »
             </blockquote>
 
             <div className="oak-tags-list">
@@ -91,8 +82,8 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Grid of Other Gallery Photos */}
-        <div className="gallery-grid">
+        {/* Grid of 2 Gallery Photos */}
+        <div className="gallery-grid two-items">
           {galleryItems.slice(1).map((item) => (
             <div 
               key={item.id} 
@@ -114,6 +105,7 @@ export default function Gallery() {
               <div className="gallery-card-body">
                 <h4 className="gallery-item-title">{item.title}</h4>
                 <p className="gallery-item-sub">{item.subtitle}</p>
+                <p className="gallery-item-desc-inline">{item.description}</p>
               </div>
             </div>
           ))}

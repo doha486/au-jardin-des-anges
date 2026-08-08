@@ -1,77 +1,147 @@
 import React, { useState } from 'react';
-import { Baby, Footprints, ShieldCheck, Sparkles, Feather, Smile, Compass, Users } from 'lucide-react';
+import { Baby, Footprints, ShieldCheck, Sparkles, Feather, Smile, Compass, Users, Sun, Star } from 'lucide-react';
 import './Grandir.css';
 
 export default function Grandir() {
-  const [activeStage, setActiveStage] = useState('tout-petits');
+  const [activeStage, setActiveStage] = useState('angelots');
 
   const stages = {
-    'tout-petits': {
-      id: 'tout-petits',
-      badge: '3 mois à 1 an et demi',
-      title: 'Forfait 1 — Les Tout-Petits',
-      subTitle: 'Le cocon des premières découvertes & de la sécurité affective',
+    'angelots': {
+      id: 'angelots',
+      badge: '3 à 12 mois',
+      title: 'Section 1 — Les Angelots',
+      subTitle: 'Cocon de douceur, sécurité affective & premiers éveils',
       accentColor: 'var(--rose-powder)',
-      themeClass: 'theme-rose-blue',
-      tagline: 'Un univers paisible et douillet façonné pour bercer, rassurer et encourager l’éveil sensoriel à son propre rythme.',
+      themeClass: 'theme-rose',
+      tagline: 'Un espace paisible et douillet façonné pour rassurer le nourrisson et accompagner ses premiers gestes.',
       highlights: [
         {
           title: 'Cocon & Sécurité Affective',
-          desc: 'Un espace chaleureux où chaque bébé bénéficie de repères stables et d’une présence attentive pour grandir en toute confiance.',
+          desc: 'Un environnement chaleureux où chaque bébé bénéficie de repères stables et d’une présence bienveillante.',
           icon: ShieldCheck,
           color: '#E8B7B5'
         },
         {
-          title: 'Éveil Sensoriel & Écoute',
-          desc: 'Stimulation douce à travers des berceuses, des jeux de textures, des hochets en bois naturel et des bains de sons apaisants.',
+          title: 'Éveil Sensoriel Doux',
+          desc: 'Stimulation visuelle et auditive par des berceuses, jeux de textures et hochets en bois naturel.',
           icon: Sparkles,
           color: '#D5DEE6'
         },
         {
-          title: 'Motricité Libre',
-          desc: 'Un aménagement adapté au sol pour explorer le retournement, le ramper et l’assise en toute liberté et sécurité.',
+          title: 'Motricité Libre au Sol',
+          desc: 'Tapis adaptés pour favoriser le retournement, l’assise et la liberté de mouvement en toute sécurité.',
           icon: Baby,
           color: '#E8B7B5'
         },
         {
-          title: 'Temps Calmes & Rythmes Respectés',
-          desc: 'Le sommeil et les repas sont strictement calqués sur le rythme biologique individuel de chaque tout-petit.',
+          title: 'Rythmes Biologiques Respectés',
+          desc: 'Sommeil et biberons calqués strictement sur le rythme individuel de chaque angelot.',
           icon: Feather,
           color: '#D5DEE6'
         }
       ]
     },
-    'explorateurs': {
-      id: 'explorateurs',
-      badge: '1 an et demi à 4 ans',
-      title: 'Forfait 2 — Les Explorateurs',
-      subTitle: 'L’aventure de l’autonomie, de la socialisation & des ateliers',
-      accentColor: 'var(--green-sage)',
-      themeClass: 'theme-sage-gold',
-      tagline: 'Un monde d’exploration active où l’enfant s’épanouit, affirme sa personnalité et participe aux ateliers créatifs.',
+    'ailes': {
+      id: 'ailes',
+      badge: '12 à 24 mois (1 à 2 ans)',
+      title: 'Section 2 — Les Petites Ailes',
+      subTitle: 'Premiers pas, motricité libre & exploration tactile',
+      accentColor: 'var(--blue-sky)',
+      themeClass: 'theme-blue',
+      tagline: 'L’étape clé de la marche, de la découverte du monde debout et des jeux de manipulation.',
       highlights: [
         {
-          title: 'Autonomie & Confiance',
-          desc: 'L’enfant apprend à s’habiller, choisir ses activités et développer son indépendance en toute sérénité.',
-          icon: Compass,
-          color: '#7D826C'
+          title: 'Apprentissage de la Marche',
+          desc: 'Parcours moteurs sécurisés pour acquérir l’équilibre et la confiance en son corps.',
+          icon: Footprints,
+          color: '#D5DEE6'
         },
         {
-          title: 'Socialisation & Partage',
-          desc: 'Jeux en groupe, activités coopératives et apprentissage doux de la vie en collectivité et de l’empathie.',
+          title: 'Exploration Tactile & Matières',
+          desc: 'Manipulation de cubes en chêne massif, pâte à modeler naturelle et bacs sensoriels.',
+          icon: Sparkles,
+          color: '#BFC5AF'
+        },
+        {
+          title: 'Premiers Mots & Comptines',
+          desc: 'Éveil au langage par des histoires illustrées, comptines gestuelles et jeux d’imitation.',
+          icon: Smile,
+          color: '#E8B7B5'
+        },
+        {
+          title: 'Autonomie au Quotidien',
+          desc: 'Apprentissage doux du lavage des mains et des premiers gestes d’indépendance.',
+          icon: Compass,
+          color: '#D6B06B'
+        }
+      ]
+    },
+    'etoiles': {
+      id: 'etoiles',
+      badge: '2 à 3 ans',
+      title: 'Section 3 — Les Étoiles',
+      subTitle: 'Socialisation, langage, ateliers créatifs & autonomie',
+      accentColor: 'var(--green-sage)',
+      themeClass: 'theme-sage',
+      tagline: 'Un monde d’exploration active où l’enfant affirme sa personnalité et développe l’empathie.',
+      highlights: [
+        {
+          title: 'Socialisation & Vie en Groupe',
+          desc: 'Jeux coopératifs et apprentissage respectueux du partage avec les camarades.',
           icon: Users,
           color: '#BFC5AF'
         },
         {
-          title: 'Accès Direct aux Ateliers',
-          desc: 'Accès quotidien aux ateliers créatifs et artistiques (peinture, sculpture, éveil musical, poterie, yoga, théâtre...).',
-          icon: Footprints,
+          title: 'Ateliers Créatifs Quotidiens',
+          desc: 'Initiation à la peinture écologique, au fusain, au théâtre, à la musique et au yoga.',
+          icon: Sparkles,
           color: '#D6B06B'
         },
         {
-          title: 'Préparation Douce à la Maternelle',
-          desc: 'Acquisition des compétences clés pour une transition sereine et enthousiaste vers l’école.',
+          title: 'Enrichissement du Langage',
+          desc: 'Échanges animés, jeux de rôles, marionnettes et structuration de la parole.',
           icon: Smile,
+          color: '#D5DEE6'
+        },
+        {
+          title: 'Confiance & Indépendance',
+          desc: 'L’enfant apprend à choisir ses activités et à exprimer clairement ses besoins.',
+          icon: Compass,
+          color: '#7D826C'
+        }
+      ]
+    },
+    'lumieres': {
+      id: 'lumieres',
+      badge: '3 à 4 ans',
+      title: 'Section 4 — Les Lumières',
+      subTitle: 'Épanouissement, expression artistique & préparation douce à la maternelle',
+      accentColor: 'var(--gold-soft)',
+      themeClass: 'theme-gold',
+      tagline: 'Accompagnement vers la maturité affective, la logique créative et la grande entrée à l’école.',
+      highlights: [
+        {
+          title: 'Préparation Douce à la Maternelle',
+          desc: 'Activités de pré-écriture, repérage spatial, écoute et autonomie vestimentaire.',
+          icon: Star,
+          color: '#D6B06B'
+        },
+        {
+          title: 'Expression Artistique Évoluée',
+          desc: 'Pliages origami, travail de l’argile naturelle et projets plastiques au fusain.',
+          icon: Sparkles,
+          color: '#E8B7B5'
+        },
+        {
+          title: 'Développement de la Logique',
+          desc: 'Jeux d’assemblage en bois noble, puzzles, raisonnement et curiosité scientifique.',
+          icon: Sun,
+          color: '#BFC5AF'
+        },
+        {
+          title: 'Épanouissement Émotionnel',
+          desc: 'Reconnaissance des émotions, maîtrise de soi et grande bienveillance collective.',
+          icon: ShieldCheck,
           color: '#7D826C'
         }
       ]
@@ -88,53 +158,78 @@ export default function Grandir() {
         <div className="section-header">
           <div className="section-badge">
             <Baby size={16} />
-            <span>Grandir au Jardin des Anges</span>
+            <span>Épanouissement & Sections d'Âge</span>
           </div>
-          <h2 className="section-title">Le Parcours d'Épanouissement de Votre Enfant</h2>
+          <h2 className="section-title">Nos 4 Sections d'Accueil Adaptées</h2>
           <p className="section-subtitle">
-            Deux étapes pensées comme un fil continu de bienveillance, adaptées aux besoins physiologiques et émotionnels de chaque âge.
+            Un fil continu de bienveillance réparti en 4 tranches d'âge pensées pour respecter le développement physique, cognitif et affectif de chaque enfant.
           </p>
         </div>
 
-        {/* Interactive Age Timeline Ribbon */}
+        {/* Interactive 4-Stage Navigation Ribbon */}
         <div className="timeline-ribbon-container">
-          <div className="timeline-steps">
-            {/* Step 1 */}
+          <div className="timeline-steps steps-4">
+            
+            {/* Stage 1 */}
             <button 
-              className={`timeline-step-btn step-rose ${activeStage === 'tout-petits' ? 'active' : ''}`}
-              onClick={() => setActiveStage('tout-petits')}
-              aria-label="Voir le Forfait 1 : Les Tout-Petits (3 mois à 1 an et demi)"
+              className={`timeline-step-btn step-rose ${activeStage === 'angelots' ? 'active' : ''}`}
+              onClick={() => setActiveStage('angelots')}
+              aria-label="Voir la Section 1 : Les Angelots (3 à 12 mois)"
             >
               <div className="step-node">
-                <Baby size={22} />
+                <Baby size={20} />
               </div>
               <div className="step-info">
-                <span className="step-age">3 mois → 1 an et demi</span>
-                <span className="step-name">Les Tout-Petits</span>
+                <span className="step-age">3 → 12 mois</span>
+                <span className="step-name">Les Angelots</span>
               </div>
             </button>
 
-            {/* Path connector line */}
-            <div className="timeline-connector">
-              <span className="connector-dot"></span>
-              <span className="connector-line"></span>
-              <span className="connector-dot"></span>
-            </div>
-
-            {/* Step 2 */}
+            {/* Stage 2 */}
             <button 
-              className={`timeline-step-btn step-sage ${activeStage === 'explorateurs' ? 'active' : ''}`}
-              onClick={() => setActiveStage('explorateurs')}
-              aria-label="Voir le Forfait 2 : Les Explorateurs (1 an et demi à 4 ans)"
+              className={`timeline-step-btn step-blue ${activeStage === 'ailes' ? 'active' : ''}`}
+              onClick={() => setActiveStage('ailes')}
+              aria-label="Voir la Section 2 : Les Petites Ailes (12 à 24 mois)"
             >
               <div className="step-node">
-                <Footprints size={22} />
+                <Footprints size={20} />
               </div>
               <div className="step-info">
-                <span className="step-age">1 an et demi → 4 ans</span>
-                <span className="step-name">Les Explorateurs</span>
+                <span className="step-age">12 → 24 mois</span>
+                <span className="step-name">Les Petites Ailes</span>
               </div>
             </button>
+
+            {/* Stage 3 */}
+            <button 
+              className={`timeline-step-btn step-sage ${activeStage === 'etoiles' ? 'active' : ''}`}
+              onClick={() => setActiveStage('etoiles')}
+              aria-label="Voir la Section 3 : Les Étoiles (2 à 3 ans)"
+            >
+              <div className="step-node">
+                <Star size={20} />
+              </div>
+              <div className="step-info">
+                <span className="step-age">2 → 3 ans</span>
+                <span className="step-name">Les Étoiles</span>
+              </div>
+            </button>
+
+            {/* Stage 4 */}
+            <button 
+              className={`timeline-step-btn step-gold ${activeStage === 'lumieres' ? 'active' : ''}`}
+              onClick={() => setActiveStage('lumieres')}
+              aria-label="Voir la Section 4 : Les Lumières (3 à 4 ans)"
+            >
+              <div className="step-node">
+                <Sun size={20} />
+              </div>
+              <div className="step-info">
+                <span className="step-age">3 → 4 ans</span>
+                <span className="step-name">Les Lumières</span>
+              </div>
+            </button>
+
           </div>
         </div>
 
@@ -169,7 +264,7 @@ export default function Grandir() {
           {/* Reassuring note footer */}
           <div className="stage-footer-note">
             <p>
-              🌿 <strong>Notre promesse :</strong> Chaque enfant évolue à son propre rythme, entouré de bras bienveillants et d'éducatrices passionnées.
+              🌿 <strong>Notre engagement :</strong> Chaque section dispose de son propre espace d'éveil aménagé et d'éducatrices dédiées pour veiller au bonheur des enfants.
             </p>
           </div>
         </div>

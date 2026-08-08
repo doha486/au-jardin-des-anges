@@ -39,8 +39,8 @@ export default function Contact() {
             </div>
 
             <span className="contact-label">Appelez-nous directement</span>
-            <a href="tel:0628681664" className="phone-display-link" title="Appeler le 06 28 68 16 64">
-              06 28 68 16 64
+            <a href="tel:+212628681664" className="phone-display-link" title="Appeler le +212 6 28 68 16 64">
+              +212 6 28 68 16 64
             </a>
             <p className="phone-subtext">Du lundi au vendredi · Accueil téléphonique chaleureux & bienveillant</p>
 
@@ -100,9 +100,9 @@ export default function Contact() {
                   <MapPin size={22} color="#5C524E" />
                 </div>
                 <div>
-                  <h4 className="info-item-title">Emplacement de la Crèche</h4>
+                  <h4 className="info-item-title">Emplacement de la Crèche Privée</h4>
                   <p className="info-item-text">
-                    Au jardin des anges<br />
+                    Au jardin des anges — Crèche & Pouponnière Privée<br />
                     Un cadre calme, sécurisé et arboré, pensé pour le bien-être des enfants.
                   </p>
                 </div>

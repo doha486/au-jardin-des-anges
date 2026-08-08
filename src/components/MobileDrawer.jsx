@@ -32,7 +32,7 @@ export default function MobileDrawer({ isOpen, onClose, navLinks }) {
         <div className="drawer-panel-header">
           <div>
             <p className="drawer-brand-name">AU JARDIN DES ANGES</p>
-            <p className="drawer-brand-sub">Crèche & Pouponnière · 3 mois à 4 ans</p>
+            <p className="drawer-brand-sub">Crèche & Pouponnière Privée · 3m à 4ans</p>
           </div>
           <button 
             className="drawer-close-btn"
@@ -70,7 +70,7 @@ export default function MobileDrawer({ isOpen, onClose, navLinks }) {
             className="btn btn-primary btn-full"
           >
             <MessageCircle size={18} />
-            <span>Discuter sur WhatsApp</span>
+            <span>Discuter sur WhatsApp (+212)</span>
           </a>
 
           <a 

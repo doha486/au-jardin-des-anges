@@ -38,15 +38,15 @@ export default function Hero() {
 
           <p className="hero-slogan">
             <span>Grandir</span>
-            <span className="slogan-sep">🌸</span>
+            <span className="slogan-sep">•</span>
             <span>S'éveiller</span>
-            <span className="slogan-sep">🌸</span>
+            <span className="slogan-sep">•</span>
             <span>S'illuminer</span>
           </p>
 
           <div className="subtitle-badge">
             <span className="badge-dot"></span>
-            <span>Crèche & pouponnière · 3 mois à 4 ans</span>
+            <span>Crèche & pouponnière privée · 3 mois à 4 ans</span>
           </div>
 
           <p className="hero-description">
