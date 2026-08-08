@@ -10,8 +10,8 @@ export default function Gallery() {
       id: 'oak-chair',
       src: '/gallery/oak-chair.jpg',
       title: 'Mobilier en Chêne Massif',
-      subtitle: 'Matériau noble & naturel',
-      description: 'À Au Jardin des Anges, nous avons choisi le chêne massif, un matériau noble, naturel et durable, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽',
+      subtitle: 'Des matériaux nobles, naturels & durables',
+      description: 'Au Jardin des Anges, nous avons choisi le chêne massif, des matériaux nobles, naturels et durables, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽',
       isFeature: true,
       tag: 'Qualité & Bien-être'
     },
@@ -80,7 +80,7 @@ export default function Gallery() {
             <h3 className="oak-banner-title">Un Mobilier Chaleureux & Durable</h3>
 
             <blockquote className="oak-quote">
-              « À Au Jardin des Anges, nous avons choisi le <strong>chêne massif</strong>, un matériau noble, naturel et durable, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽 »
+              « Au Jardin des Anges, nous avons choisi le <strong>chêne massif</strong>, des matériaux nobles, naturels et durables, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽 »
             </blockquote>
 
             <div className="oak-tags-list">
