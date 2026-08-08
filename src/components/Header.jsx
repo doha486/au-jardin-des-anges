@@ -31,7 +31,7 @@ export default function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         
-        {/* Brand Name Only */}
+        {/* Brand Name Only — Clean & Prominent */}
         <a href="#" className="brand-link" aria-label="Au jardin des anges - Accueil">
           <div className="brand-text">
             <span className="brand-title">AU JARDIN DES ANGES</span>
@@ -52,7 +52,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Actions Desktop (Instagram + WhatsApp + Email) */}
+        {/* Actions Desktop & Mobile Header Icons */}
         <div className="header-actions">
           <a 
             href={instagramUrl}
@@ -62,27 +62,29 @@ export default function Header() {
             title="Suivez-nous sur Instagram"
             aria-label="Instagram Au Jardin des Anges"
           >
-            <Instagram size={20} />
+            <Instagram size={18} />
           </a>
 
           <a 
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn btn-whatsapp-compact"
+            className="btn btn-whatsapp-header"
             title="Discuter directement sur WhatsApp"
+            aria-label="Discuter sur WhatsApp"
           >
             <MessageCircle size={18} />
-            <span>WhatsApp</span>
+            <span className="header-btn-text">WhatsApp</span>
           </a>
 
           <a 
             href={mailtoUrl}
-            className="btn btn-email-compact"
+            className="btn btn-email-header"
             title="Nous écrire par email"
+            aria-label="Nous écrire par email"
           >
             <Mail size={18} />
-            <span>Email</span>
+            <span className="header-btn-text">Email</span>
           </a>
 
           {/* Mobile Menu Toggle Button */}
@@ -92,7 +94,7 @@ export default function Header() {
             aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>

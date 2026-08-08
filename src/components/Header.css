@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(231, 224, 218, 0.92);
+  background-color: rgba(231, 224, 218, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
@@ -31,32 +31,35 @@
   align-items: center;
   gap: 0.85rem;
   text-decoration: none;
-  flex-shrink: 1;
-  min-width: 0;
+  flex-shrink: 0;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
-  min-width: 0;
 }
 
 .brand-title {
   font-family: var(--font-title);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--text-main);
   line-height: 1.1;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .brand-title {
-    font-size: 0.98rem;
+    font-size: 1.05rem;
     letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -68,7 +71,7 @@
   white-space: nowrap;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .brand-subtitle {
     font-size: 0.7rem;
   }
@@ -126,8 +129,14 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.55rem;
   flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .header-actions {
+    gap: 0.4rem;
+  }
 }
 
 .btn-social-icon {
@@ -151,35 +160,37 @@
   transform: translateY(-1px);
 }
 
-.btn-whatsapp-compact {
+/* WhatsApp & Email buttons in Header */
+.btn-whatsapp-header {
   background-color: #25D366;
   color: #FFFFFF;
   font-size: 0.85rem;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   font-weight: 600;
   transition: all var(--transition-fast);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
   white-space: nowrap;
+  border: none;
 }
 
-.btn-whatsapp-compact:hover {
+.btn-whatsapp-header:hover {
   background-color: #20bd5a;
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
 }
 
-.btn-email-compact {
+.btn-email-header {
   background-color: var(--bg-card);
   color: var(--text-main);
   border: 1.5px solid var(--green-olive);
   font-size: 0.85rem;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   font-weight: 600;
@@ -188,17 +199,42 @@
   white-space: nowrap;
 }
 
-@media (max-width: 580px) {
-  .btn-email-compact {
-    display: none; /* Hide top email text on small phone screens so header bar remains clean */
-  }
-}
-
-.btn-email-compact:hover {
+.btn-email-header:hover {
   background-color: var(--green-olive);
   color: #FFFFFF;
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(125, 130, 108, 0.25);
+}
+
+/* On Mobile Phones (< 640px): Convert WhatsApp & Email to small circular icon buttons */
+@media (max-width: 640px) {
+  .header-btn-text {
+    display: none; /* Hide button text on mobile phone screens */
+  }
+
+  .btn-whatsapp-header {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    min-width: 36px;
+    min-height: 36px;
+    flex-shrink: 0;
+  }
+
+  .btn-email-header {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    min-width: 36px;
+    min-height: 36px;
+    flex-shrink: 0;
+  }
 }
 
 .mobile-toggle {
@@ -211,6 +247,7 @@
   cursor: pointer;
   padding: 0.3rem;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 @media (min-width: 960px) {
