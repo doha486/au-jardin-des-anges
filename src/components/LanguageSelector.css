@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+/* Hide desktop dropdown trigger on mobile phones to prevent header crowding */
+@media (max-width: 640px) {
+  .lang-selector-container {
+    display: none;
+  }
+}
+
 .lang-trigger-btn {
   display: inline-flex;
   align-items: center;
@@ -100,21 +107,21 @@
   font-weight: 700;
 }
 
-/* Mobile Bar Style */
+/* Mobile Bar Style (inside Mobile Drawer) */
 .lang-bar-mobile {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.75rem 0;
+  gap: 0.4rem;
+  padding: 0.6rem 0;
   border-bottom: 1px solid var(--border-light);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .lang-mobile-title {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -124,7 +131,7 @@
 .lang-mobile-pills {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .lang-pill {
@@ -132,13 +139,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
-  padding: 0.45rem 0.5rem;
+  gap: 0.3rem;
+  padding: 0.4rem 0.45rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-light);
   background-color: var(--bg-primary);
   color: var(--text-main);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
