@@ -1,37 +1,39 @@
 import React, { useState } from 'react';
 import { Camera, Trees, X, ZoomIn } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import './Gallery.css';
 
 export default function Gallery() {
   const [activeImage, setActiveImage] = useState(null);
+  const { t } = useLanguage();
 
   const galleryItems = [
     {
       id: 'oak-chair',
       src: '/gallery/oak-chair.jpg',
-      title: 'Mobilier en Chêne Massif',
-      subtitle: 'Matériau noble & naturel',
-      description: 'À Au Jardin des Anges, nous avons choisi le chêne massif, un matériau noble, naturel et durable, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽',
+      title: t('oakBannerTitle'),
+      subtitle: t('oakBadge'),
+      description: t('oakQuote'),
       isFeature: true,
-      tag: 'Qualité & Bien-être'
+      tag: t('oakBadge')
     },
     {
       id: 'playroom',
       src: '/gallery/playroom-chairs.jpg',
-      title: 'Espace de Jeu & Fresque Arc-en-Ciel',
-      subtitle: 'Un cadre coloré et lumineux',
-      description: 'Des chaises pastel, du parquet chaleureux et une magnifique fresque murale peinte à la main représentant de douces montagnes et un arc-en-ciel vibrant.',
+      title: t('photo1Title'),
+      subtitle: t('photo1Sub'),
+      description: t('photo1Desc'),
       isFeature: false,
-      tag: 'Lieu de Vie'
+      tag: t('photo1Tag')
     },
     {
       id: 'drawings-1',
       src: '/gallery/wall-drawings-1.jpg',
-      title: 'Illustrations Murales Fait-Main',
-      subtitle: 'Fusain & Peinture Écologique',
-      description: 'Des illustrations poétiques réalisées à la main sur les murs de la crèche (montgolfière, petite fusée, abeille et fleurs). Les dessins sont réalisés avec du fusain et de la peinture écologique non nocive pour les enfants. 🎨🌿',
+      title: t('photo2Title'),
+      subtitle: t('photo2Sub'),
+      description: t('photo2Desc'),
       isFeature: false,
-      tag: 'Décoration Écologique'
+      tag: t('photo2Tag')
     }
   ];
 
@@ -43,13 +45,13 @@ export default function Gallery() {
         <div className="section-header">
           <div className="section-badge">
             <Camera size={16} color="#7D826C" />
-            <span>Découvrir Nos Espaces</span>
+            <span>{t('galleryBadge')}</span>
           </div>
 
-          <h2 className="section-title">Galerie Photo de la Crèche</h2>
+          <h2 className="section-title">{t('galleryTitle')}</h2>
 
           <p className="section-subtitle">
-            Plongez dans l'univers chaleureux et poétique du Jardin des Anges. Un cadre pensé dans les moindres détails pour la sécurité et l'épanouissement de votre enfant.
+            {t('gallerySubtitle')}
           </p>
         </div>
 
@@ -65,19 +67,19 @@ export default function Gallery() {
           <div className="oak-banner-content">
             <div className="oak-badge">
               <Trees size={16} color="#8C6A28" />
-              <span>Chêne Massif & Matériaux Nobles</span>
+              <span>{t('oakBadge')}</span>
             </div>
 
-            <h3 className="oak-banner-title">Un Mobilier Chaleureux & Durable</h3>
+            <h3 className="oak-banner-title">{t('oakBannerTitle')}</h3>
 
             <blockquote className="oak-quote">
-              « À Au Jardin des Anges, nous avons choisi le <strong>chêne massif</strong>, un matériau noble, naturel et durable, pour offrir à nos petits anges un environnement chaleureux, qualitatif et pensé pour leur bien-être. 🤍🪽 »
+              {t('oakQuote')}
             </blockquote>
 
             <div className="oak-tags-list">
-              <span className="oak-tag-pill">🌱 100% Naturel</span>
-              <span className="oak-tag-pill">🛡️ Bois Noble & Robuste</span>
-              <span className="oak-tag-pill">🎨 Finitions Douces</span>
+              <span className="oak-tag-pill">{t('oakTag1')}</span>
+              <span className="oak-tag-pill">{t('oakTag2')}</span>
+              <span className="oak-tag-pill">{t('oakTag3')}</span>
             </div>
           </div>
         </div>
@@ -91,7 +93,7 @@ export default function Gallery() {
               onClick={() => setActiveImage(item)}
               tabIndex={0}
               role="button"
-              aria-label={`Agrandir l'image ${item.title}`}
+              aria-label={`Agrandir ${item.title}`}
               onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') setActiveImage(item); }}
             >
               <div className="gallery-img-wrap">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Grandir from './components/Grandir';
@@ -13,25 +14,27 @@ import FloralSeparator from './components/FloralSeparator';
 
 export default function App() {
   return (
-    <div className="app-root">
-      <Header />
-      <main>
-        <Hero />
-        <FloralSeparator />
-        <Grandir />
-        <FloralSeparator />
-        <Seveiller />
-        <FloralSeparator />
-        <Gallery />
-        <FloralSeparator />
-        <Silluminer />
-        <FloralSeparator />
-        <Visites />
-        <FloralSeparator />
-        <Contact />
-      </main>
-      <Footer />
-      <FloatingActions />
-    </div>
+    <LanguageProvider>
+      <div className="app-root">
+        <Header />
+        <main>
+          <Hero />
+          <FloralSeparator />
+          <Grandir />
+          <FloralSeparator />
+          <Seveiller />
+          <FloralSeparator />
+          <Gallery />
+          <FloralSeparator />
+          <Silluminer />
+          <FloralSeparator />
+          <Visites />
+          <FloralSeparator />
+          <Contact />
+        </main>
+        <Footer />
+        <FloatingActions />
+      </div>
+    </LanguageProvider>
   );
 }

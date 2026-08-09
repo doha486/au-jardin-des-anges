@@ -1,9 +1,12 @@
 import React from 'react';
 import { Phone, MessageCircle, Mail, MapPin, Heart, Clock, Instagram, Navigation, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import FloralSeparator from './FloralSeparator';
 import './Contact.css';
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   const whatsappUrl = "https://wa.me/212628681664?text=Bonjour,%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20Au%20jardin%20des%20anges%20🌿";
   const mailtoUrl = "mailto:aujardindesangescreche@gmail.com?subject=Demande%20d'information%20%E2%80%94%20Au%20jardin%20des%20anges";
   const googleMapsUrl = "https://maps.app.goo.gl/QHhJZMsDyqCJ8uUG7?g_st=ic";
@@ -17,13 +20,13 @@ export default function Contact() {
         <div className="section-header">
           <div className="section-badge">
             <Heart size={16} color="#E8B7B5" />
-            <span>À Votre Écoute</span>
+            <span>{t('contactBadge')}</span>
           </div>
 
-          <h2 className="section-title">Prenez Contact avec Nous</h2>
+          <h2 className="section-title">{t('contactTitle')}</h2>
 
           <p className="section-subtitle">
-            Toute l'équipe d'Au jardin des anges se tient à votre entière disposition pour échanger sur vos besoins et vous accueillir.
+            {t('contactSubtitle')}
           </p>
         </div>
 
@@ -38,11 +41,11 @@ export default function Contact() {
               </div>
             </div>
 
-            <span className="contact-label">Appelez-nous directement</span>
+            <span className="contact-label">{t('callUsDirectly')}</span>
             <a href="tel:+212628681664" className="phone-display-link" title="Appeler le +212 6 28 68 16 64">
               +212 6 28 68 16 64
             </a>
-            <p className="phone-subtext">Du lundi au vendredi · Accueil téléphonique chaleureux & bienveillant</p>
+            <p className="phone-subtext">{t('phoneSchedule')}</p>
 
             <div className="contact-cta-buttons">
               <a 
@@ -52,7 +55,7 @@ export default function Contact() {
                 className="btn btn-primary contact-btn"
               >
                 <MessageCircle size={20} />
-                <span>Discuter sur WhatsApp</span>
+                <span>{t('btnWhatsapp')}</span>
               </a>
 
               <a 
@@ -60,7 +63,7 @@ export default function Contact() {
                 className="btn btn-secondary contact-btn"
               >
                 <Mail size={18} />
-                <span>Nous écrire par email</span>
+                <span>{t('btnEmail')}</span>
               </a>
             </div>
 
@@ -80,8 +83,8 @@ export default function Contact() {
               >
                 <Instagram size={22} color="#E1306C" />
                 <div>
-                  <span className="ig-handle-text">@au.jardin.des.anges</span>
-                  <span className="ig-subtext">Suivez les activités et les coulisses de notre crèche sur Instagram</span>
+                  <span className="ig-handle-text">{t('igHandleText')}</span>
+                  <span className="ig-subtext">{t('igSubtext')}</span>
                 </div>
                 <ExternalLink size={16} className="ig-external-icon" />
               </a>
@@ -91,7 +94,7 @@ export default function Contact() {
 
           {/* Location & Map Card */}
           <div className="contact-card info-card card">
-            <h3 className="info-card-title">Localisation & Accès</h3>
+            <h3 className="info-card-title">{t('locationTitle')}</h3>
             
             <div className="info-list">
               
@@ -100,10 +103,9 @@ export default function Contact() {
                   <MapPin size={22} color="#5C524E" />
                 </div>
                 <div>
-                  <h4 className="info-item-title">Emplacement de la Crèche Privée</h4>
-                  <p className="info-item-text">
-                    Au jardin des anges — Crèche & Pouponnière Privée<br />
-                    Un cadre calme, sécurisé et arboré, pensé pour le bien-être des enfants.
+                  <h4 className="info-item-title">{t('locationHeading')}</h4>
+                  <p className="info-item-text" style={{ whiteSpace: 'pre-line' }}>
+                    {t('locationText')}
                   </p>
                 </div>
               </div>
@@ -113,23 +115,22 @@ export default function Contact() {
                   <Clock size={22} color="#5C524E" />
                 </div>
                 <div>
-                  <h4 className="info-item-title">Visites sur Rendez-vous</h4>
-                  <p className="info-item-text">
-                    Les <strong>Mardi</strong> et <strong>Jeudi</strong><br />
-                    Créneaux au choix : <strong>16h00</strong> ou <strong>16h30</strong>
+                  <h4 className="info-item-title">{t('visitesHeader')}</h4>
+                  <p className="info-item-text" style={{ whiteSpace: 'pre-line' }}>
+                    {t('visitesSubtext')}
                   </p>
                 </div>
               </div>
 
             </div>
 
-            {/* Google Maps Action Button & Preview Box */}
+            {/* Google Maps Action Button */}
             <div className="map-action-card">
               <div className="map-badge-header">
                 <Navigation size={18} color="#7D826C" />
-                <span>Plan & Itinéraire</span>
+                <span>{t('mapHeader')}</span>
               </div>
-              <p className="map-desc">Retrouvez la crèche facilement sur votre application de navigation.</p>
+              <p className="map-desc">{t('mapDesc')}</p>
               
               <a 
                 href={googleMapsUrl} 
@@ -138,7 +139,7 @@ export default function Contact() {
                 className="btn btn-gold btn-full map-btn"
               >
                 <MapPin size={18} />
-                <span>Ouvrir sur Google Maps</span>
+                <span>{t('btnGoogleMaps')}</span>
                 <ExternalLink size={16} />
               </a>
             </div>

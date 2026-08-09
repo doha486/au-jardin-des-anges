@@ -1,30 +1,33 @@
 import React from 'react';
 import { Sun, Heart, Shield, Users, Smile, Flower2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import './Silluminer.css';
 
 export default function Silluminer() {
+  const { t } = useLanguage();
+
   const values = [
     {
-      title: 'Bienveillance & Écoute au Quotidien',
-      desc: 'Chaque geste, mot et regard est empreint de douceur. Nous respectons le rythme de sommeil, d’apprentissage et d’expression de votre enfant.',
+      title: t('val1Title'),
+      desc: t('val1Desc'),
       icon: Heart,
       color: '#E8B7B5'
     },
     {
-      title: 'Cadre d’Épanouissement Sécurisé',
-      desc: 'Des espaces pensés et aménagés spécifiquement pour la petite enfance, conformes aux plus hautes exigences de sécurité et de propreté.',
+      title: t('val2Title'),
+      desc: t('val2Desc'),
       icon: Shield,
       color: '#BFC5AF'
     },
     {
-      title: 'Équipe Passionnée & Qualifiée',
-      desc: 'Une équipe de professionnelles diplômées et dévouées, régulièrement formées aux pédagogies positives et aux gestes de premiers secours.',
+      title: t('val3Title'),
+      desc: t('val3Desc'),
       icon: Users,
       color: '#D5DEE6'
     },
     {
-      title: 'Partenariat de Confiance avec les Parents',
-      desc: 'Un dialogue quotidien attentif, des transmissions vivantes de la journée de votre enfant et une écoute constante de vos attentes.',
+      title: t('val4Title'),
+      desc: t('val4Desc'),
       icon: Smile,
       color: '#D6B06B'
     }
@@ -38,13 +41,13 @@ export default function Silluminer() {
         <div className="section-header">
           <div className="section-badge">
             <Sun size={16} color="#D6B06B" />
-            <span>Notre Philosophie</span>
+            <span>{t('silluminerBadge')}</span>
           </div>
 
-          <h2 className="section-title">S'illuminer au Quotidien</h2>
+          <h2 className="section-title">{t('silluminerTitle')}</h2>
 
           <p className="section-subtitle">
-            Parce que chaque enfant porte en lui une étincelle unique, notre mission est de la préserver et de la faire rayonner dans un climat de totale confiance.
+            {t('silluminerSubtitle')}
           </p>
         </div>
 
@@ -70,9 +73,9 @@ export default function Silluminer() {
             <Flower2 size={34} color="#7D826C" />
           </div>
           <blockquote className="quote-text">
-            « Permettre à votre enfant d'explorer le monde à son propre rythme, bercé par l'affection et guidé par la curiosité. »
+            {t('philosophyQuote')}
           </blockquote>
-          <p className="quote-author">— L'équipe d'Au jardin des anges</p>
+          <p className="quote-author">{t('philosophyAuthor')}</p>
         </div>
 
       </div>

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, Mail, Menu, X, Instagram } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 import MobileDrawer from './MobileDrawer';
 import './Header.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +19,12 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'Grandir', href: '#grandir', subtitle: 'Nos 4 sections' },
-    { name: 'S\'éveiller', href: '#seveiller', subtitle: 'Les ateliers & Summer Camp' },
-    { name: 'Galerie', href: '#galerie', subtitle: 'Photos & mobilier' },
-    { name: 'S\'illuminer', href: '#silluminer', subtitle: 'Nos valeurs' },
-    { name: 'Rendez-vous', href: '#visites', subtitle: 'Heures de visite' },
-    { name: 'Contact', href: '#contact', subtitle: 'Nous trouver' },
+    { name: t('navGrandir'), href: '#grandir', subtitle: t('navGrandirSub') },
+    { name: t('navSeveiller'), href: '#seveiller', subtitle: t('navSeveillerSub') },
+    { name: t('navGalerie'), href: '#galerie', subtitle: t('navGalerieSub') },
+    { name: t('navSilluminer'), href: '#silluminer', subtitle: t('navSilluminerSub') },
+    { name: t('navRendezvous'), href: '#visites', subtitle: t('navRendezvousSub') },
+    { name: t('navContact'), href: '#contact', subtitle: t('navContactSub') },
   ];
 
   const whatsappUrl = "https://wa.me/212628681664?text=Bonjour,%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20Au%20jardin%20des%20anges%20🌿";
@@ -33,11 +36,11 @@ export default function Header() {
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container header-container">
           
-          {/* Brand Name Only — Clean & Spacious */}
+          {/* Brand Name Only */}
           <a href="#" className="brand-link" aria-label="Au jardin des anges - Accueil">
             <div className="brand-text">
-              <span className="brand-title">AU JARDIN DES ANGES</span>
-              <span className="brand-subtitle">Crèche & Pouponnière Privée</span>
+              <span className="brand-title">{t('brandName')}</span>
+              <span className="brand-subtitle">{t('brandSubtitle')}</span>
             </div>
           </a>
 
@@ -54,14 +57,18 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Header Action Icon Circles (Instagram, WhatsApp, Email) */}
+          {/* Header Action Icon Circles + Language Selector */}
           <div className="header-actions">
+            
+            {/* Language Selector Dropdown */}
+            <LanguageSelector />
+
             <a 
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-header-circle btn-header-insta"
-              title="Suivez-nous sur Instagram"
+              title="Instagram"
               aria-label="Instagram Au Jardin des Anges"
             >
               <Instagram size={18} />
@@ -72,8 +79,8 @@ export default function Header() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-header-circle btn-header-wtsp"
-              title="Discuter directement sur WhatsApp"
-              aria-label="Discuter sur WhatsApp"
+              title="WhatsApp"
+              aria-label="WhatsApp"
             >
               <MessageCircle size={18} />
             </a>
@@ -81,8 +88,8 @@ export default function Header() {
             <a 
               href={mailtoUrl}
               className="btn-header-circle btn-header-email"
-              title="Nous écrire par email"
-              aria-label="Nous écrire par email"
+              title="Email"
+              aria-label="Email"
             >
               <Mail size={18} />
             </a>

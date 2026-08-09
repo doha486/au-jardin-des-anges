@@ -1,132 +1,143 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MessageCircle, Mail, Sparkles, CheckCircle2 } from 'lucide-react';
+import { CalendarHeart, Clock, CheckCircle, MessageCircle, Mail, Sparkles, Heart } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import './Visites.css';
 
 export default function Visites() {
   const [selectedDay, setSelectedDay] = useState('Mardi');
   const [selectedTime, setSelectedTime] = useState('16h00');
+  const { t } = useLanguage();
 
-  const days = ['Mardi', 'Jeudi'];
-  const times = ['16h00', '16h30'];
+  const dayLabel = selectedDay === 'Mardi' ? t('dayMardi') : t('dayJeudi');
 
-  const getWhatsAppBookingUrl = () => {
-    const text = `Bonjour,%20je%20souhaite%20réserver%20une%20visite%20pour%20mon%20enfant%20le%20${selectedDay}%20à%20${selectedTime}%20au%20Jardin%20des%20Anges%20🌿`;
-    return `https://wa.me/212628681664?text=${text}`;
-  };
+  const whatsappMessage = encodeURIComponent(
+    `Bonjour, je souhaite réserver une visite à Au jardin des anges le ${dayLabel} à ${selectedTime} 🌿`
+  );
+  const whatsappUrl = `https://wa.me/212628681664?text=${whatsappMessage}`;
 
-  const getEmailBookingUrl = () => {
-    const subject = `Demande%20de%20visite%20%E2%80%94%20${selectedDay}%20%C3%A0%20${selectedTime}`;
-    const body = `Bonjour,%0A%0AJe%20souhaite%20demander%20un%20rendez-vous%20de%20visite%20pour%20mon%20enfant%20le%20${selectedDay}%20à%20${selectedTime}.%0A%0AMerci%20de%20me%20confirmer%20votre%20disponibilité.%0A%0ACordialement.`;
-    return `mailto:aujardindesangescreche@gmail.com?subject=${subject}&body=${body}`;
-  };
+  const emailSubject = encodeURIComponent(`Réservation de Visite — ${dayLabel} à ${selectedTime}`);
+  const emailBody = encodeURIComponent(
+    `Bonjour,\n\nJe souhaite réserver un créneau de visite individuelle pour le ${dayLabel} à ${selectedTime}.\n\nMerci de me confirmer la disponibilité.\n\nCordialement.`
+  );
+  const mailtoUrl = `mailto:aujardindesangescreche@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
   return (
     <section className="visites-section" id="visites">
       <div className="container">
         
-        {/* Header */}
+        {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <Calendar size={16} color="#7D826C" />
-            <span>Visiter la Crèche</span>
+            <CalendarHeart size={16} color="#7D826C" />
+            <span>{t('visitesBadge')}</span>
           </div>
 
-          <h2 className="section-title">Heures de Visite sur Rendez-vous</h2>
+          <h2 className="section-title">{t('visitesTitle')}</h2>
 
           <p className="section-subtitle">
-            Nous avons hâte de vous faire découvrir nos locaux et notre équipe. 
-            Sélectionnez le créneau qui vous convient le mieux (Mardi & Jeudi à 16h00 ou 16h30).
+            {t('visitesSubtitle')}
           </p>
         </div>
 
-        {/* Mini Appointment Card */}
+        {/* Interactive Booking Card */}
         <div className="rendezvous-card card">
-          <div className="rdv-card-header">
-            <div className="rdv-icon-badge">
+          <div className="rendezvous-card-header">
+            <div className="sparkle-icon-wrap">
               <Sparkles size={24} color="#D6B06B" />
             </div>
-            <div>
-              <h3 className="rdv-title">Carte Rendez-Vous Visite</h3>
-              <p className="rdv-sub">Sélection rapide de votre créneau préféré</p>
-            </div>
+            <h3>{t('visitesStepTitle')}</h3>
           </div>
 
-          <div className="rdv-body">
+          <div className="booking-selector-grid">
             
             {/* Day Selector */}
-            <div className="rdv-field-group">
-              <label className="rdv-label">
-                <Calendar size={18} />
-                <span>1. Choisissez le jour :</span>
+            <div className="selector-group">
+              <label className="selector-label">
+                <CalendarHeart size={18} />
+                <span>{t('visitesChooseDay')}</span>
               </label>
-              <div className="rdv-options-grid">
-                {days.map((day) => (
-                  <button
-                    key={day}
-                    className={`rdv-chip ${selectedDay === day ? 'selected' : ''}`}
-                    onClick={() => setSelectedDay(day)}
-                  >
-                    <span>{day}</span>
-                    {selectedDay === day && <CheckCircle2 size={16} className="chip-check" />}
-                  </button>
-                ))}
+              <div className="options-pills">
+                <button
+                  type="button"
+                  className={`pill-btn ${selectedDay === 'Mardi' ? 'active' : ''}`}
+                  onClick={() => setSelectedDay('Mardi')}
+                >
+                  <CheckCircle size={16} className="pill-check" />
+                  <span>{t('dayMardi')}</span>
+                </button>
+
+                <button
+                  type="button"
+                  className={`pill-btn ${selectedDay === 'Jeudi' ? 'active' : ''}`}
+                  onClick={() => setSelectedDay('Jeudi')}
+                >
+                  <CheckCircle size={16} className="pill-check" />
+                  <span>{t('dayJeudi')}</span>
+                </button>
               </div>
             </div>
 
-            {/* Time Slot Selector (16h00 & 16h30) */}
-            <div className="rdv-field-group">
-              <label className="rdv-label">
+            {/* Time Slot Selector */}
+            <div className="selector-group">
+              <label className="selector-label">
                 <Clock size={18} />
-                <span>2. Choisissez l'heure (16h00 ou 16h30) :</span>
+                <span>{t('visitesChooseTime')}</span>
               </label>
-              <div className="rdv-options-grid">
-                {times.map((time) => (
-                  <button
-                    key={time}
-                    className={`rdv-chip ${selectedTime === time ? 'selected' : ''}`}
-                    onClick={() => setSelectedTime(time)}
-                  >
-                    <span>{time}</span>
-                    {selectedTime === time && <CheckCircle2 size={16} className="chip-check" />}
-                  </button>
-                ))}
+              <div className="options-pills">
+                <button
+                  type="button"
+                  className={`pill-btn ${selectedTime === '16h00' ? 'active' : ''}`}
+                  onClick={() => setSelectedTime('16h00')}
+                >
+                  <CheckCircle size={16} className="pill-check" />
+                  <span>{t('visitesSelectedTime')}</span>
+                </button>
+
+                <button
+                  type="button"
+                  className={`pill-btn ${selectedTime === '16h30' ? 'active' : ''}`}
+                  onClick={() => setSelectedTime('16h30')}
+                >
+                  <CheckCircle size={16} className="pill-check" />
+                  <span>{t('visitesSelectedTime2')}</span>
+                </button>
               </div>
-            </div>
-
-            {/* Summary preview box */}
-            <div className="rdv-summary-box">
-              <p className="summary-text">
-                📍 Votre visite souhaitée : <strong>{selectedDay} à {selectedTime}</strong>
-              </p>
-            </div>
-
-            {/* Direct Booking CTA */}
-            <div className="rdv-actions">
-              <a 
-                href={getWhatsAppBookingUrl()}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn btn-primary rdv-btn"
-              >
-                <MessageCircle size={20} />
-                <span>Réserver ce créneau via WhatsApp</span>
-              </a>
-
-              <a 
-                href={getEmailBookingUrl()}
-                className="btn btn-secondary rdv-btn"
-              >
-                <Mail size={18} />
-                <span>Demander par email</span>
-              </a>
             </div>
 
           </div>
 
-          <div className="rdv-footer-info">
-            <p>
-              💡 <em>Les visites sont individuelles afin de consacrer tout notre temps à répondre à vos questions et à échanger sur votre enfant.</em>
-            </p>
+          {/* Selected Summary Pill */}
+          <div className="booking-summary-pill">
+            <span className="summary-label">{t('visitesSelectedLabel')}</span>
+            <span className="summary-value">
+              🌿 <strong>{dayLabel}</strong> à <strong>{selectedTime}</strong>
+            </span>
+          </div>
+
+          {/* Booking Action Buttons */}
+          <div className="booking-actions">
+            <a 
+              href={whatsappUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary booking-btn"
+            >
+              <MessageCircle size={20} />
+              <span>{t('visitesBookWa')}</span>
+            </a>
+
+            <a 
+              href={mailtoUrl} 
+              className="btn btn-secondary booking-btn"
+            >
+              <Mail size={18} />
+              <span>{t('visitesBookEmail')}</span>
+            </a>
+          </div>
+
+          <div className="booking-footer-note">
+            <Heart size={16} color="#E8B7B5" />
+            <span>{t('visitesNote')}</span>
           </div>
 
         </div>

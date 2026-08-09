@@ -1,80 +1,82 @@
 import React, { useState } from 'react';
 import { Palette, Sparkles, Drama, Layers, Music, Flower2, HeartHandshake, Info, X, Check, ArrowRight, Sun, CalendarHeart } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import './Seveiller.css';
 
 export default function Seveiller() {
   const [selectedWorkshop, setSelectedWorkshop] = useState(null);
+  const { t } = useLanguage();
 
   const workshops = [
     {
       id: 'peinture',
-      title: 'Peinture & Expression Plastique',
-      category: 'Arts Visuels',
+      title: t('ws1Title'),
+      category: t('ws1Cat'),
       icon: Palette,
       iconBg: '#E8B7B5',
-      summary: 'Éveil aux matières, mélange des gouaches aux doigts et pinceaux doux.',
-      details: 'L’atelier peinture permet à votre enfant d’explorer librement les couleurs et les textures. Il développe la coordination œil-main et l’expression émotionnelle dans un espace où l’expérimentation est encouragée sans jugement.',
-      benefits: ['Sensibilisation aux couleurs', 'Motricité fine des doigts', 'Liberté d’expression créative']
+      summary: t('ws1Sum'),
+      details: t('ws1Details'),
+      benefits: [t('ws1B1'), t('ws1B2'), t('ws1B3')]
     },
     {
       id: 'sculpture',
-      title: 'Sculpture & Modelage 3D',
-      category: 'Volume & Manipulation',
+      title: t('ws2Title'),
+      category: t('ws2Cat'),
       icon: Sparkles,
       iconBg: '#D5DEE6',
-      summary: 'Découverte des formes en relief, pâte à sel et assemblages ludiques.',
-      details: 'Cet atelier propose de toucher, malaxer, rouler et sculpter différentes matières souples. L’enfant appréhende le volume dans l’espace et stimule son sens tactile.',
-      benefits: ['Développement du sens tactile', 'Repérage tridimensionnel', 'Concentration et minutie']
+      summary: t('ws2Sum'),
+      details: t('ws2Details'),
+      benefits: [t('ws2B1'), t('ws2B2'), t('ws2B3')]
     },
     {
       id: 'theatre',
-      title: 'Théâtre & Expression Corporelle',
-      category: 'Jeu & Émotions',
+      title: t('ws3Title'),
+      category: t('ws3Cat'),
       icon: Drama,
       iconBg: '#BFC5AF',
-      summary: 'Jeux de rôles, déguisements, mimes doux et marionnettes.',
-      details: 'À travers de petites histoires racontées et des accessoires colorés, l’enfant donne vie à des personnages, apprend à reconnaître et nommer ses émotions, tout en s’amusant avec ses camarades.',
-      benefits: ['Confiance en soi et prise de parole', 'Compréhension des émotions', 'Sens du collectif']
+      summary: t('ws3Sum'),
+      details: t('ws3Details'),
+      benefits: [t('ws3B1'), t('ws3B2'), t('ws3B3')]
     },
     {
       id: 'origami',
-      title: 'Origami & Pliage Magique',
-      category: 'Agilité & Pliage',
+      title: t('ws4Title'),
+      category: t('ws4Cat'),
       icon: Layers,
       iconBg: '#D6B06B',
-      summary: 'Pliages simples, création d’animaux en papier et guirlandes.',
-      details: 'Un atelier calme qui apprend à plier des feuilles de couleur pour leur donner vie (papillons, petits bateaux). Cet exercice développe une remarquable précision du geste.',
-      benefits: ['Patience et persévérance', 'Précision de la préhension', 'Fierté du résultat accompli']
+      summary: t('ws4Sum'),
+      details: t('ws4Details'),
+      benefits: [t('ws4B1'), t('ws4B2'), t('ws4B3')]
     },
     {
       id: 'musique',
-      title: 'Éveil Musical & Percussions',
-      category: 'Sons & Rythmes',
+      title: t('ws5Title'),
+      category: t('ws5Cat'),
       icon: Music,
       iconBg: '#D5DEE6',
-      summary: 'Maracas, marimbas, tambours d’eau et chant de comptines du monde.',
-      details: 'L’éveil musical fait vibrer la sensibilité de l’enfant aux sonorités et aux rythmes. Il s’initie à la manipulation de petits instruments d’éveil naturels.',
-      benefits: ['Écoute attentive et oreille musicale', 'Sens du rythme', 'Joie du chant collectif']
+      summary: t('ws5Sum'),
+      details: t('ws5Details'),
+      benefits: [t('ws5B1'), t('ws5B2'), t('ws5B3')]
     },
     {
       id: 'poterie',
-      title: 'Poterie & Argile Naturelle',
-      category: 'Terre & Nature',
+      title: t('ws6Title'),
+      category: t('ws6Cat'),
       icon: Flower2,
       iconBg: '#BFC5AF',
-      summary: 'Travail de la terre cuite et séchée, empreintes de feuilles et coquillages.',
-      details: 'Un contact direct avec l’élément terre. L’enfant imprime ses empreintes dans l’argile, façonne de petits bols et découvre la transformation de la matière naturelle.',
-      benefits: ['Ancrage et apaisement sensoriel', 'Connexion aux éléments naturels', 'Dextérité digitale']
+      summary: t('ws6Sum'),
+      details: t('ws6Details'),
+      benefits: [t('ws6B1'), t('ws6B2'), t('ws6B3')]
     },
     {
       id: 'yoga',
-      title: 'Yoga & Éveil Corporel',
-      category: 'Sérénité & Corps',
+      title: t('ws7Title'),
+      category: t('ws7Cat'),
       icon: HeartHandshake,
       iconBg: '#E8B7B5',
-      summary: 'Postures d’animaux (le chat, l’arbre), respiration et étirements ludiques.',
-      details: 'Un moment de calme guidé par des comptines douces. L’enfant prend conscience de son schéma corporel, s’étire comme un petit chat et apprend à retrouver son calme.',
-      benefits: ['Souplesse et équilibre', 'Gestion du calme et du souffle', 'Reconnexion à son corps']
+      summary: t('ws7Sum'),
+      details: t('ws7Details'),
+      benefits: [t('ws7B1'), t('ws7B2'), t('ws7B3')]
     }
   ];
 
@@ -86,19 +88,19 @@ export default function Seveiller() {
         <div className="section-header">
           <div className="section-badge">
             <Sparkles size={16} color="#7D826C" />
-            <span>S'éveiller & Créer</span>
+            <span>{t('seveillerBadge')}</span>
           </div>
 
-          <h2 className="section-title">Les Ateliers d'Éveil & de Créativité</h2>
+          <h2 className="section-title">{t('seveillerTitle')}</h2>
 
           <p className="section-subtitle">
-            Chaque atelier est pensé comme une porte ouverte sur la curiosité, l'imagination et l'expression personnelle.
+            {t('seveillerSubtitle')}
           </p>
 
-          {/* Discreet requirement note */}
+          {/* Requirement note */}
           <div className="workshop-notice-pill">
             <Info size={18} className="notice-icon" />
-            <span>Accessibles aux enfants du <strong>Forfait 2 (1 an et demi et +)</strong></span>
+            <span>{t('workshopNotice')}</span>
           </div>
         </div>
 
@@ -113,7 +115,7 @@ export default function Seveiller() {
                 onClick={() => setSelectedWorkshop(ws)}
                 tabIndex={0}
                 role="button"
-                aria-label={`En savoir plus sur l'atelier ${ws.title}`}
+                aria-label={ws.title}
                 onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') setSelectedWorkshop(ws); }}
               >
                 <div className="workshop-header">
@@ -127,32 +129,32 @@ export default function Seveiller() {
                 <p className="workshop-summary">{ws.summary}</p>
 
                 <div className="workshop-action">
-                  <span>Découvrir l'atelier</span>
+                  <span>{t('discoverWorkshop')}</span>
                   <ArrowRight size={16} />
                 </div>
               </div>
             );
           })}
 
-          {/* Summer Camp Card — Special Highlighted "À venir" Card */}
+          {/* Summer Camp Card */}
           <div className="workshop-card summer-camp-card card">
             <div className="summer-camp-top">
               <div className="summer-badge-coming">
                 <CalendarHeart size={14} />
-                <span>À venir · Pas cette année</span>
+                <span>{t('summerCampBadge')}</span>
               </div>
               <div className="workshop-icon-wrap summer-icon-bg">
                 <Sun size={26} color="#D6B06B" />
               </div>
             </div>
 
-            <h3 className="workshop-title summer-title">Summer Camp</h3>
+            <h3 className="workshop-title summer-title">{t('summerCampTitle')}</h3>
             <p className="workshop-summary summer-summary">
-              Un programme d'été féérique en plein air combinant jeux d'eau doux, jardinage, ateliers nature et spectacles d'enfants pendant les grandes vacances.
+              {t('summerCampDesc')}
             </p>
 
             <div className="summer-footer-badge">
-              <span>🌿 Édition future (en cours de préparation)</span>
+              <span>🌿 {t('summerCampFooter')}</span>
             </div>
           </div>
 
@@ -167,7 +169,7 @@ export default function Seveiller() {
             <button 
               className="modal-close-btn" 
               onClick={() => setSelectedWorkshop(null)}
-              aria-label="Fermer la boîte de dialogue"
+              aria-label={t('modalClose')}
             >
               <X size={22} />
             </button>
@@ -185,7 +187,7 @@ export default function Seveiller() {
             <p className="modal-details">{selectedWorkshop.details}</p>
 
             <div className="modal-benefits-box">
-              <h4 className="benefits-heading">Les bienfaits pour votre enfant :</h4>
+              <h4 className="benefits-heading">{t('modalBenefitsTitle')}</h4>
               <ul>
                 {selectedWorkshop.benefits.map((b, i) => (
                   <li key={i}>
@@ -197,7 +199,7 @@ export default function Seveiller() {
             </div>
 
             <div className="modal-footer-note">
-              <span>🌿 Dispensé par nos éducatrices spécialisées dans une ambiance douce et sécurisante.</span>
+              <span>🌿 {t('modalFooterNote')}</span>
             </div>
           </div>
         </div>

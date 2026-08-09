@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import { MessageCircle, Mail, X, Instagram } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 import './MobileDrawer.css';
 
 export default function MobileDrawer({ isOpen, onClose, navLinks }) {
+  const { t } = useLanguage();
+
   const whatsappUrl = "https://wa.me/212628681664?text=Bonjour,%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20Au%20jardin%20des%20anges%20🌿";
   const mailtoUrl = "mailto:aujardindesangescreche@gmail.com?subject=Demande%20d'information%20%E2%80%94%20Au%20jardin%20des%20anges";
   const instagramUrl = "https://www.instagram.com/au.jardin.des.anges?igsh=MTJrZDgwMGd3b3c0aw==";
@@ -31,8 +35,8 @@ export default function MobileDrawer({ isOpen, onClose, navLinks }) {
         {/* Fixed Header of the Panel */}
         <div className="drawer-panel-header">
           <div>
-            <p className="drawer-brand-name">AU JARDIN DES ANGES</p>
-            <p className="drawer-brand-sub">Crèche & Pouponnière Privée · 3m à 4ans</p>
+            <p className="drawer-brand-name">{t('brandName')}</p>
+            <p className="drawer-brand-sub">{t('brandSubtitle')}</p>
           </div>
           <button 
             className="drawer-close-btn"
@@ -42,6 +46,9 @@ export default function MobileDrawer({ isOpen, onClose, navLinks }) {
             <X size={20} />
           </button>
         </div>
+
+        {/* Language Switcher Bar inside Mobile Drawer */}
+        <LanguageSelector isMobile={true} />
 
         {/* Scrollable Middle Navigation Section */}
         <nav className="drawer-nav">
@@ -70,7 +77,7 @@ export default function MobileDrawer({ isOpen, onClose, navLinks }) {
             className="btn btn-primary btn-full"
           >
             <MessageCircle size={18} />
-            <span>Discuter sur WhatsApp (+212)</span>
+            <span>{t('btnWhatsapp')}</span>
           </a>
 
           <a 
@@ -78,7 +85,7 @@ export default function MobileDrawer({ isOpen, onClose, navLinks }) {
             className="btn btn-secondary btn-full"
           >
             <Mail size={18} />
-            <span>Nous écrire par email</span>
+            <span>{t('btnEmail')}</span>
           </a>
 
           <a 
