@@ -39,30 +39,34 @@ export default function Visites() {
           </p>
         </div>
 
-        {/* Interactive Booking Card */}
+        {/* Premium Interactive Booking Card */}
         <div className="rendezvous-card card">
+          
           <div className="rendezvous-card-header">
             <div className="sparkle-icon-wrap">
-              <Sparkles size={24} color="#D6B06B" />
+              <Sparkles size={22} color="#8C6A28" />
             </div>
-            <h3>{t('visitesStepTitle')}</h3>
+            <div>
+              <h3 className="rdv-card-title">{t('visitesStepTitle')}</h3>
+            </div>
           </div>
 
-          <div className="booking-selector-grid">
+          <div className="booking-selector-container">
             
-            {/* Day Selector */}
+            {/* Step 1: Day Selector */}
             <div className="selector-group">
               <label className="selector-label">
-                <CalendarHeart size={18} />
+                <CalendarHeart size={18} className="label-icon" />
                 <span>{t('visitesChooseDay')}</span>
               </label>
-              <div className="options-pills">
+
+              <div className="options-pills-grid">
                 <button
                   type="button"
                   className={`pill-btn ${selectedDay === 'Mardi' ? 'active' : ''}`}
                   onClick={() => setSelectedDay('Mardi')}
                 >
-                  <CheckCircle size={16} className="pill-check" />
+                  <CheckCircle size={18} className="pill-check-icon" />
                   <span>{t('dayMardi')}</span>
                 </button>
 
@@ -71,25 +75,26 @@ export default function Visites() {
                   className={`pill-btn ${selectedDay === 'Jeudi' ? 'active' : ''}`}
                   onClick={() => setSelectedDay('Jeudi')}
                 >
-                  <CheckCircle size={16} className="pill-check" />
+                  <CheckCircle size={18} className="pill-check-icon" />
                   <span>{t('dayJeudi')}</span>
                 </button>
               </div>
             </div>
 
-            {/* Time Slot Selector */}
+            {/* Step 2: Time Slot Selector */}
             <div className="selector-group">
               <label className="selector-label">
-                <Clock size={18} />
+                <Clock size={18} className="label-icon" />
                 <span>{t('visitesChooseTime')}</span>
               </label>
-              <div className="options-pills">
+
+              <div className="options-pills-grid">
                 <button
                   type="button"
                   className={`pill-btn ${selectedTime === '16h00' ? 'active' : ''}`}
                   onClick={() => setSelectedTime('16h00')}
                 >
-                  <CheckCircle size={16} className="pill-check" />
+                  <CheckCircle size={18} className="pill-check-icon" />
                   <span>{t('visitesSelectedTime')}</span>
                 </button>
 
@@ -98,7 +103,7 @@ export default function Visites() {
                   className={`pill-btn ${selectedTime === '16h30' ? 'active' : ''}`}
                   onClick={() => setSelectedTime('16h30')}
                 >
-                  <CheckCircle size={16} className="pill-check" />
+                  <CheckCircle size={18} className="pill-check-icon" />
                   <span>{t('visitesSelectedTime2')}</span>
                 </button>
               </div>
@@ -135,8 +140,9 @@ export default function Visites() {
             </a>
           </div>
 
+          {/* Reassuring Footer Note */}
           <div className="booking-footer-note">
-            <Heart size={16} color="#E8B7B5" />
+            <Heart size={16} color="#E8B7B5" fill="#E8B7B5" />
             <span>{t('visitesNote')}</span>
           </div>
 
