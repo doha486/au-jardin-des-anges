@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Baby, Footprints, ShieldCheck, Sparkles, Feather, Smile, Compass, Users, Sun, Star } from 'lucide-react';
+import { Baby, Footprints, ShieldCheck, Sparkles, Feather, Smile, Compass, Users, Sun, Star, BookOpen } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Grandir.css';
 
@@ -73,7 +73,7 @@ export default function Grandir() {
         {
           title: t('sec2F4Title'),
           desc: t('sec2F4Desc'),
-          icon: Compass,
+          icon: BookOpen,
           color: '#D6B06B'
         }
       ]
@@ -102,8 +102,8 @@ export default function Grandir() {
         {
           title: t('sec3F3Title'),
           desc: t('sec3F3Desc'),
-          icon: Smile,
-          color: '#D5DEE6'
+          icon: BookOpen,
+          color: '#E8B7B5'
         },
         {
           title: t('sec3F4Title'),
@@ -131,19 +131,19 @@ export default function Grandir() {
         {
           title: t('sec4F2Title'),
           desc: t('sec4F2Desc'),
-          icon: Sparkles,
+          icon: BookOpen,
           color: '#E8B7B5'
         },
         {
           title: t('sec4F3Title'),
           desc: t('sec4F3Desc'),
-          icon: Sun,
+          icon: Sparkles,
           color: '#BFC5AF'
         },
         {
           title: t('sec4F4Title'),
           desc: t('sec4F4Desc'),
-          icon: ShieldCheck,
+          icon: Sun,
           color: '#7D826C'
         }
       ]
@@ -263,12 +263,6 @@ export default function Grandir() {
             })}
           </div>
 
-          {/* Reassuring note footer */}
-          <div className="stage-footer-note">
-            <p>
-              🌿 <strong>{t('grandirFooterNote')}</strong>
-            </p>
-          </div>
         </div>
 
       </div>

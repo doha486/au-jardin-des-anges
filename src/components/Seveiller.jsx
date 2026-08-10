@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Palette, Sparkles, Drama, Layers, Music, Flower2, HeartHandshake, Info, X, Check, ArrowRight, Sun, CalendarHeart } from 'lucide-react';
+import { Palette, Sparkles, Drama, Layers, Music, Flower2, HeartHandshake, Info, X, Check, ArrowRight, Sun, CalendarHeart, Grid3x3 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Seveiller.css';
 
@@ -17,6 +17,16 @@ export default function Seveiller() {
       summary: t('ws1Sum'),
       details: t('ws1Details'),
       benefits: [t('ws1B1'), t('ws1B2'), t('ws1B3')]
+    },
+    {
+      id: 'mosaique',
+      title: t('ws8Title'),
+      category: t('ws8Cat'),
+      icon: Grid3x3,
+      iconBg: '#D6B06B',
+      summary: t('ws8Sum'),
+      details: t('ws8Details'),
+      benefits: [t('ws8B1'), t('ws8B2'), t('ws8B3')]
     },
     {
       id: 'sculpture',
@@ -43,7 +53,7 @@ export default function Seveiller() {
       title: t('ws4Title'),
       category: t('ws4Cat'),
       icon: Layers,
-      iconBg: '#D6B06B',
+      iconBg: '#E8B7B5',
       summary: t('ws4Sum'),
       details: t('ws4Details'),
       benefits: [t('ws4B1'), t('ws4B2'), t('ws4B3')]
