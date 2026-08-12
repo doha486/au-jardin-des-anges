@@ -11,9 +11,9 @@
 
 @media (max-width: 640px) {
   .floating-right-dock {
-    bottom: 1.25rem;
-    right: 0.75rem;
-    gap: 0.5rem;
+    bottom: 1rem;
+    right: 0.4rem;
+    gap: 0.4rem;
   }
 }
 
@@ -32,12 +32,12 @@
 
 @media (max-width: 480px) {
   .float-action-btn {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
   }
   .float-action-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
   }
 }
 

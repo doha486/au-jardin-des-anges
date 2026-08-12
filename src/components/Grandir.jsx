@@ -152,6 +152,14 @@ export default function Grandir() {
 
   const current = stages[activeStage];
 
+  const getStageShortName = (stageObj) => {
+    const raw = stageObj.title || '';
+    if (raw.includes('—')) {
+      return raw.split('—')[1].trim();
+    }
+    return raw;
+  };
+
   return (
     <section className="grandir-section" id="grandir">
       <div className="container">
@@ -176,14 +184,14 @@ export default function Grandir() {
             <button 
               className={`timeline-step-btn step-rose ${activeStage === 'angelots' ? 'active' : ''}`}
               onClick={() => setActiveStage('angelots')}
-              aria-label={t('sec1Title')}
+              aria-label={stages['angelots'].title}
             >
               <div className="step-node">
                 <Baby size={20} />
               </div>
               <div className="step-info">
-                <span className="step-age">{t('sec1Badge')}</span>
-                <span className="step-name">{t('sec1Title').split('—')[1] || t('sec1Title')}</span>
+                <span className="step-age">{stages['angelots'].badge}</span>
+                <span className="step-name">{getStageShortName(stages['angelots'])}</span>
               </div>
             </button>
 
@@ -191,14 +199,14 @@ export default function Grandir() {
             <button 
               className={`timeline-step-btn step-blue ${activeStage === 'ailes' ? 'active' : ''}`}
               onClick={() => setActiveStage('ailes')}
-              aria-label={t('sec2Title')}
+              aria-label={stages['ailes'].title}
             >
               <div className="step-node">
                 <Footprints size={20} />
               </div>
               <div className="step-info">
-                <span className="step-age">{t('sec2Badge')}</span>
-                <span className="step-name">{t('sec2Title').split('—')[1] || t('sec2Title')}</span>
+                <span className="step-age">{stages['ailes'].badge}</span>
+                <span className="step-name">{getStageShortName(stages['ailes'])}</span>
               </div>
             </button>
 
@@ -206,14 +214,14 @@ export default function Grandir() {
             <button 
               className={`timeline-step-btn step-sage ${activeStage === 'etoiles' ? 'active' : ''}`}
               onClick={() => setActiveStage('etoiles')}
-              aria-label={t('sec3Title')}
+              aria-label={stages['etoiles'].title}
             >
               <div className="step-node">
                 <Star size={20} />
               </div>
               <div className="step-info">
-                <span className="step-age">{t('sec3Badge')}</span>
-                <span className="step-name">{t('sec3Title').split('—')[1] || t('sec3Title')}</span>
+                <span className="step-age">{stages['etoiles'].badge}</span>
+                <span className="step-name">{getStageShortName(stages['etoiles'])}</span>
               </div>
             </button>
 
@@ -221,14 +229,14 @@ export default function Grandir() {
             <button 
               className={`timeline-step-btn step-gold ${activeStage === 'lumieres' ? 'active' : ''}`}
               onClick={() => setActiveStage('lumieres')}
-              aria-label={t('sec4Title')}
+              aria-label={stages['lumieres'].title}
             >
               <div className="step-node">
                 <Sun size={20} />
               </div>
               <div className="step-info">
-                <span className="step-age">{t('sec4Badge')}</span>
-                <span className="step-name">{t('sec4Title').split('—')[1] || t('sec4Title')}</span>
+                <span className="step-age">{stages['lumieres'].badge}</span>
+                <span className="step-name">{getStageShortName(stages['lumieres'])}</span>
               </div>
             </button>
 
