@@ -45,7 +45,7 @@ export const translations = {
     sec1F3Title: "Motricité Libre au Sol",
     sec1F3Desc: "Tapis adaptés pour favoriser le retournement, l’assise et la liberté de mouvement en toute sécurité.",
     sec1F4Title: "Rythmes Biologiques Respectés",
-    sec1F4Desc: "Sommeil et biberons calqués strictly sur le rythme individuel de chaque angelot.",
+    sec1F4Desc: "Sommeil et biberons calqués sur le rythme individuel de chaque angelot.",
 
     sec2Badge: "12 à 24 mois (1 à 2 ans)",
     sec2Title: "Section 2 — Les Petites Ailes",
@@ -144,7 +144,7 @@ export const translations = {
     ws6Title: "Poterie & Argile Naturelle",
     ws6Cat: "Terre & Nature",
     ws6Sum: "Travail de la terre cuite et séchée, empreintes de feuilles et coquillages.",
-    ws6Details: "Un contact direct avec l’élément terre. L’enfant imprime ses empreintes dans l’argile, façonne de petits bols et découvre la transformation de la matière naturelle.",
+    ws6Details: "Un contact direct avec l’élément terre. L’enfant imprime ses empreintes dans l’argile, façonne de petits bowls et découvre la transformation de la matière naturelle.",
     ws6B1: "Ancrage et apaisement sensoriel",
     ws6B2: "Connexion aux éléments naturels",
     ws6B3: "Dextérité digitale",
@@ -241,7 +241,7 @@ export const translations = {
     footerContactTitle: "Contact Direct",
     footerDesc: "Un havre de paix dédié à la petite enfance. Sécurité affective, éveil sensoriel et bienveillance au quotidien.",
     copyright: "Au jardin des anges — Crèche & Pouponnière Privée. Tous droits réservés.",
-    footerHeart: "Fait avec pour l'épanouissement des tout-petits."
+    footerHeart: "Fait avec amour pour l'épanouissement des tout-petits."
   },
 
   en: {
@@ -290,7 +290,7 @@ export const translations = {
     sec1F3Title: "Free Ground Motor Skills",
     sec1F3Desc: "Adapted floor mats to encourage rolling, sitting, and free movement in complete safety.",
     sec1F4Title: "Respected Biological Rhythms",
-    sec1F4Desc: "Sleep and bottle times strictly aligned with each infant's individual biological clock.",
+    sec1F4Desc: "Sleep and bottle times aligned with each infant's individual biological clock.",
 
     sec2Badge: "12 to 24 months (1 to 2 years)",
     sec2Title: "Section 2 — Little Wings",
@@ -486,7 +486,7 @@ export const translations = {
     footerContactTitle: "Direct Contact",
     footerDesc: "A peaceful haven dedicated to early childhood. Emotional security, sensory awakening, and daily kindness.",
     copyright: "Au Jardin des Anges — Private Daycare & Nursery. All rights reserved.",
-    footerHeart: "Made with for the joy of little ones."
+    footerHeart: "Made with love for the joy of little ones."
   },
 
   ar: {
@@ -501,9 +501,9 @@ export const translations = {
     btnWhatsapp: "تواصل عبر واتساب",
     btnEmail: "مراسلتنا عبر البريد الإلكتروني",
     instagramFollow: "تابعوا لحظاتنا الجميلة على إنستغرام @au.jardin.des.anges",
-    pillar1: "أمان عاطفي محيط",
+    pillar1: "الأمان العاطفي",
     pillar2: "إيقاظ حسي مبكر",
-    pillar3: "إطار رعاية دافئ",
+    pillar3: "بيئة دافئة وحنونة",
 
     // Nav Links
     navGrandir: "النمو والتعلم",
@@ -526,12 +526,12 @@ export const translations = {
     
     sec1Badge: "من 3 إلى 12 شهراً",
     sec1Title: "القسم الأول — الملائكة الصغار (Les Angelots)",
-    sec1Sub: "شرنقة من الحنان والأمان العاطفي والإيقاظ الأول",
+    sec1Sub: "شرنقة من الحنان، الأمان العاطفي والاكتشافات الأولى",
     sec1Tagline: "مساحة هادئة ومريحة مخصصة لطمأنة الرضيع ومرافقته في حركاته الأولى.",
     sec1F1Title: "أمان عاطفي ورعاية مستمرة",
     sec1F1Desc: "بيئة دافئة يحظى فيها كل طفل برعاية فردية وحضور دائم لمربيات متمرسات.",
     sec1F2Title: "إيقاظ حسي لطيف",
-    sec1F2Desc: "تحفيز سمعي وبصري عبر الأغاني الهادئة، ألعاب الملمس الشجرية، وشخشيخات الخشب الطبيعي.",
+    sec1F2Desc: "تحفيز سمعي وبصري عبر الأغاني الهادئة، ألعاب متنوعة الملمس، وشخشيخات الخشب الطبيعي.",
     sec1F3Title: "حركة حرة على الأرض",
     sec1F3Desc: "سجادات آمنة مخصصة لتشجيع الانقلاب، الجلوس، والحركة الحرة بأمان تام.",
     sec1F4Title: "احترام الإيقاع البيولوجي",
@@ -557,7 +557,7 @@ export const translations = {
     sec3F1Title: "تواصل اجتماعي وحياة جماعية",
     sec3F1Desc: "ألعاب تعاونية وتعلم محترم للمشاركة مع الأقران وبناء التعاطف.",
     sec3F2Title: "ورشات إبداعية يومية",
-    sec3F2Desc: "الرسم بالصباغة البيئية والفحم، الفسيفساء، التشكيل، المسرح، الموسيقى، واليوغا للأطفال.",
+    sec3F2Desc: "الرسم بطلاء بيئي والفحم، الفسيفساء، التشكيل، المسرح، الموسيقى، واليوغا للأطفال.",
     sec3F3Title: "التربية الإسلامية واللغة العربية",
     sec3F3Desc: "تعليم سمح للقيم الإيجابية، دعم اللغة العربية وتحفيظ موجه للسور القصار من القرآن الكريم.",
     sec3F4Title: "ثقة بالنفس واستقلالية",
@@ -574,11 +574,11 @@ export const translations = {
     sec4F3Title: "تعبير فني متقدم وفسيفساء",
     sec4F3Desc: "فن طي الورق (أوريغامي)، تركيب الفسيفساء، تشكيل الصلصال الطبيعي، ومشاريع الفحم.",
     sec4F4Title: "تطوير التفكير والمنطق",
-    sec4F4Desc: "ألعاب التركيب بالخشب النبيل، الألغاز، التفكير المنطقي والفضول العلمي.",
+    sec4F4Desc: "ألعاب التركيب بالخشب النبيل، الألغاز، التفكير المنطقي والفضول العلمى.",
 
     // Seveiller Section
     seveillerBadge: "استكشاف وإبداع",
-    seveillerTitle: "ورشات الإيقاظ والتفكير الإبداعي",
+    seveillerTitle: "ورشات الاكتشاف والإبداع",
     seveillerSubtitle: "تم تصميم كل ورشة كبوابة مفتوحة على الفضول، الخيال والتعبير الشخصي.",
     workshopNotice: "متاحة للأطفال ابتداءً من عمر سنة ونصف",
     discoverWorkshop: "اكتشف الورشة",
@@ -616,7 +616,7 @@ export const translations = {
     ws3B3: "روح العمل الجماعي",
 
     ws4Title: "فن الأوريغامي والطي السحري",
-    ws4Cat: "المهارة والطي",
+    ws4Cat: "المهارة وفن الطي",
     ws4Sum: "طي ورقي بسيط، صناعة حيوانات وأكاليل ملونة.",
     ws4Details: "ورشة هادئة تدرب الطفل على طي الأوراق الملونة لإعطائها حياة (فراشات، قوارب). تنمي هذه النشاطات دقة الحركة والتركيز.",
     ws4B1: "الصبر والمثابرة",
@@ -666,29 +666,29 @@ export const translations = {
     oakTag2: "🛡️ خشب صلب ومتين",
     oakTag3: "🎨 لمسات ناعمة وآمنة",
 
-    photo1Title: "مساحة اللعب والجدارية القوس قزح",
+    photo1Title: "مساحة اللعب والجدارية ذات قوس قزح",
     photo1Sub: "إطار ملون ومشرق",
     photo1Desc: "كراسي بألوان هادئة، أرضية خشبية دافئة، وجدارية فنية مرسومة يدوياً تمثل جبالاً لطيفة وقوس قزح نابض بالحياة.",
-    photo1Tag: "مساحة الحياة",
+    photo1Tag: "فضاء الحياة اليومية",
 
     photo2Title: "رسومات جدارية يدوية بالفحم",
-    photo2Sub: "فحم وصباغة بيئية آمنة",
-    photo2Desc: "رسومات شاعرية منفذة يدوياً على جدران الروضة (منطاد، صاروخ صغير، نحلة وأزهار). جميع الرسمات منجزة بالفحم وصباغة بيئية غير مضرة بالأطفال. 🎨🌿",
+    photo2Sub: "فحم وطلاء بيئي آمن",
+    photo2Desc: "رسومات شاعرية منفذة يدوياً على جدران الروضة (منطاد، صاروخ صغير، نحلة وأزهار). جميع الرسومات منجزة بالفحم وطلاء بيئي غير مضر بالأطفال. 🎨🌿",
     photo2Tag: "ديكور بيئي آمن",
 
     // Silluminer Section
     silluminerBadge: "فلسفتنا التربوية",
     silluminerTitle: "الإشراق في الحياة اليومية",
     silluminerSubtitle: "لأن كل طفل يحمل في داخله شرارة فريدة، فإن مهمتنا هي الحفاظ عليها وجعلها تتألق في بيئة من الثقة المطلقة.",
-    val1Title: "محبة واستماع يومي",
+    val1Title: "الاهتمام والإنصات يومياً",
     val1Desc: "كل حركة وكلمة ونظرة مفعمة باللطف. نحن نحترم إيقاع نوم طفلكم، تعلمه وتعبيره الحر.",
     val2Title: "إطار آمن ومحفز للنمو",
     val2Desc: "مساحات مصممة ومجهزة خصيصاً للطفولة المبكرة، وفق أعلى معايير السلامة والنظافة.",
     val3Title: "فريق مؤهل وشغوف",
     val3Desc: "فريق من المحترفات المؤهلات والمخلصات، يتلقين تدريباً مستمراً في البيداغوجيا الإيجابية والإسعافات الأولية.",
-    val4Title: "شراكة ثقة مع الأمهات والآباء",
-    val4Desc: "حوار يومي مهتم، نقل حقيقي لأحداث يوم طفلكم، واستماع دائم لتطلعاتكم.",
-    philosophyQuote: "« تمكين طفلكم من استكشاف العالم بإيقاعه الخاص، محاطاً بالحنان ومسترشداً بالفضول العلمي. »",
+    val4Title: "شراكة قائمة على الثقة مع أولياء الأمور",
+    val4Desc: "تواصل يومي باهتمام وحرص، نقل حقيقي لأحداث يوم طفلكم، واستماع دائم لتطلعاتكم.",
+    philosophyQuote: "« تمكين طفلكم من استكشاف العالم بإيقاعه الخاص، محاطاً بالحنان ومسترشداً بالفضول لديه. »",
     philosophyAuthor: "— فريق AU JARDIN DES ANGES",
 
     // Visites Section

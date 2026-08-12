@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Brand Info Column */}
         <div className="footer-col brand-col">
           <h3 className="footer-brand-title">{t('brandName')}</h3>
-          <p className="footer-brand-sub">{t('brandSubtitle')} · 3m à 4ans</p>
+          <p className="footer-brand-sub">{t('brandSubtitle')} · {t('heroBadge').split('·')[1] || "3 mois à 4 ans"}</p>
           <p className="footer-slogan">« {t('sloganPart1')} • {t('sloganPart2')} • {t('sloganPart3')} »</p>
           <p className="footer-desc">
             {t('footerDesc')}
@@ -133,7 +133,7 @@ export default function Footer() {
         <div className="container bottom-container">
           <p>© {currentYear} {t('copyright')}</p>
           <p className="footer-heart">
-            {t('footerHeart').replace('for', '')} <Heart size={14} color="#E8B7B5" fill="#E8B7B5" />
+            <span>{t('footerHeart')}</span> <Heart size={14} color="#E8B7B5" fill="#E8B7B5" />
           </p>
         </div>
       </div>

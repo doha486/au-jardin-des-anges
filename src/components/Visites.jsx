@@ -6,18 +6,22 @@ import './Visites.css';
 export default function Visites() {
   const [selectedDay, setSelectedDay] = useState('Mardi');
   const [selectedTime, setSelectedTime] = useState('16h00');
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const dayLabel = selectedDay === 'Mardi' ? t('dayMardi') : t('dayJeudi');
+  
+  // Localized time string formatting
+  const displayTime = lang === 'ar' ? (selectedTime === '16h00' ? '16:00' : '16:30') : selectedTime;
+  const timeConnector = lang === 'ar' ? 'الساعة' : lang === 'en' ? 'at' : 'à';
 
   const whatsappMessage = encodeURIComponent(
-    `Bonjour, je souhaite réserver une visite à Au jardin des anges le ${dayLabel} à ${selectedTime} 🌿`
+    `Bonjour, je souhaite réserver une visite à Au jardin des anges le ${dayLabel} ${timeConnector} ${displayTime} 🌿`
   );
   const whatsappUrl = `https://wa.me/212628681664?text=${whatsappMessage}`;
 
-  const emailSubject = encodeURIComponent(`Réservation de Visite — ${dayLabel} à ${selectedTime}`);
+  const emailSubject = encodeURIComponent(`Réservation de Visite — ${dayLabel} ${timeConnector} ${displayTime}`);
   const emailBody = encodeURIComponent(
-    `Bonjour,\n\nJe souhaite réserver un créneau de visite individuelle pour le ${dayLabel} à ${selectedTime}.\n\nMerci de me confirmer la disponibilité.\n\nCordialement.`
+    `Bonjour,\n\nJe souhaite réserver un créneau de visite individuelle pour le ${dayLabel} ${timeConnector} ${displayTime}.\n\nMerci de me confirmer la disponibilité.\n\nCordialement.`
   );
   const mailtoUrl = `mailto:aujardindesangescreche@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
@@ -95,7 +99,7 @@ export default function Visites() {
                   onClick={() => setSelectedTime('16h00')}
                 >
                   <CheckCircle size={18} className="pill-check-icon" />
-                  <span>{t('visitesSelectedTime')}</span>
+                  <span>{lang === 'ar' ? '16:00' : '16h00'}</span>
                 </button>
 
                 <button
@@ -104,7 +108,7 @@ export default function Visites() {
                   onClick={() => setSelectedTime('16h30')}
                 >
                   <CheckCircle size={18} className="pill-check-icon" />
-                  <span>{t('visitesSelectedTime2')}</span>
+                  <span>{lang === 'ar' ? '16:30' : '16h30'}</span>
                 </button>
               </div>
             </div>
@@ -115,7 +119,7 @@ export default function Visites() {
           <div className="booking-summary-pill">
             <span className="summary-label">{t('visitesSelectedLabel')}</span>
             <span className="summary-value">
-              🌿 <strong>{dayLabel}</strong> à <strong>{selectedTime}</strong>
+              🌿 <strong>{dayLabel}</strong> {timeConnector} <strong>{displayTime}</strong>
             </span>
           </div>
 
