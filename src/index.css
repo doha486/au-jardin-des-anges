@@ -57,15 +57,6 @@ body {
   text-align: right;
 }
 
-/* Maintain signature Cormorant Garamond font for brand title across ALL languages */
-.brand-title,
-.hero-title,
-.footer-brand-title {
-  font-family: var(--font-title) !important;
-  direction: ltr !important;
-  unicode-bidi: embed;
-}
-
 [dir="rtl"] .link-arrow,
 [dir="rtl"] .ig-external-icon {
   transform: scaleX(-1);
@@ -97,13 +88,6 @@ button {
   .container {
     padding: 0 2rem;
   }
-}
-
-/* LTR forced helper for handles, emails, phones */
-.ltr-text {
-  direction: ltr !important;
-  display: inline-block;
-  unicode-bidi: embed;
 }
 
 /* Global Button Styles */

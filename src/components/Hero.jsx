@@ -77,7 +77,7 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Social link with LTR handle wrapper */}
+          {/* Social link */}
           <div className="hero-social-pill">
             <a 
               href={instagramUrl} 
@@ -86,10 +86,7 @@ export default function Hero() {
               className="instagram-hero-link"
             >
               <Instagram size={18} color="#E1306C" />
-              <span>
-                {t('instagramFollow').replace('@au.jardin.des.anges', '')}
-                <span className="ltr-text">@au.jardin.des.anges</span>
-              </span>
+              <span>{t('instagramFollow')}</span>
             </a>
           </div>
 
