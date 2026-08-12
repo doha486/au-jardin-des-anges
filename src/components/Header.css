@@ -39,14 +39,20 @@
   flex-direction: column;
 }
 
+[dir="rtl"] .brand-text {
+  text-align: right;
+}
+
 .brand-title {
-  font-family: var(--font-title);
+  font-family: var(--font-title) !important;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--text-main);
   line-height: 1.1;
   white-space: nowrap;
+  direction: ltr;
+  display: inline-block;
 }
 
 @media (max-width: 640px) {
@@ -69,6 +75,10 @@
   letter-spacing: 0.04em;
   font-weight: 500;
   white-space: nowrap;
+}
+
+[dir="rtl"] .brand-subtitle {
+  text-align: right;
 }
 
 @media (max-width: 640px) {
