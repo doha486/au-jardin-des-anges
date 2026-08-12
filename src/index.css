@@ -62,17 +62,6 @@ body {
   transform: scaleX(-1);
 }
 
-[dir="rtl"] .floating-right-dock {
-  right: auto;
-  left: 1rem;
-}
-
-@media (max-width: 480px) {
-  [dir="rtl"] .floating-right-dock {
-    left: 0.75rem;
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-title);
   font-weight: 600;

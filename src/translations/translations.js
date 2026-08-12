@@ -45,7 +45,7 @@ export const translations = {
     sec1F3Title: "Motricité Libre au Sol",
     sec1F3Desc: "Tapis adaptés pour favoriser le retournement, l’assise et la liberté de mouvement en toute sécurité.",
     sec1F4Title: "Rythmes Biologiques Respectés",
-    sec1F4Desc: "Sommeil et biberons calqués strictement sur le rythme individuel de chaque angelot.",
+    sec1F4Desc: "Sommeil et biberons calqués strictly sur le rythme individuel de chaque angelot.",
 
     sec2Badge: "12 à 24 mois (1 à 2 ans)",
     sec2Title: "Section 2 — Les Petites Ailes",
@@ -491,12 +491,12 @@ export const translations = {
 
   ar: {
     // Brand & Header
-    brandName: "روضة Jardin des Anges",
-    brandSubtitle: "روضة وحضانة خاصة للأطفال",
+    brandName: "AU JARDIN DES ANGES",
+    brandSubtitle: "حضانة خاصة للأطفال",
     sloganPart1: "نمو",
     sloganPart2: "إيقاظ",
     sloganPart3: "إشراق",
-    heroBadge: "روضة وحضانة خاصة للأطفال · من 3 أشهر إلى 4 سنوات",
+    heroBadge: "حضانة خاصة للأطفال · من 3 أشهر إلى 4 سنوات",
     heroDesc: "مرحباً بكم في واحة السلام المخصصة لأطفالكم الصغار. نقدم لطفلكم بيئة دافئة وآمنة ومحفزة حيث تشكل كل يوم مغامرة لطيفة مليئة بالاستكشاف والضحك والعناية الفائقة.",
     btnWhatsapp: "تواصل عبر واتساب",
     btnEmail: "مراسلتنا عبر البريد الإلكتروني",
@@ -657,7 +657,7 @@ export const translations = {
 
     // Gallery Section
     galleryBadge: "اكتشفوا فضاءاتنا",
-    galleryTitle: "معرض صور الروضة",
+    galleryTitle: "معرض صور الحضانة",
     gallerySubtitle: "انغمسوا في عالم روضة Jardin des Anges الدافئ والشاعري. بيئة مصممة بأدق التفاصيل من أجل سلامة وسعادة طفلكم.",
     oakBadge: "خشب البلوط الصلب والمواد النبيلة",
     oakBannerTitle: "أثاث دافئ ودائم عالي الجودة",
@@ -689,11 +689,11 @@ export const translations = {
     val4Title: "شراكة ثقة مع الأمهات والآباء",
     val4Desc: "حوار يومي مهتم، نقل حقيقي لأحداث يوم طفلكم، واستماع دائم لتطلعاتكم.",
     philosophyQuote: "« تمكين طفلكم من استكشاف العالم بإيقاعه الخاص، محاطاً بالحنان ومسترشداً بالفضول العلمي. »",
-    philosophyAuthor: "— فريق روضة Au jardin des anges",
+    philosophyAuthor: "— فريق AU JARDIN DES ANGES",
 
     // Visites Section
     visitesBadge: "الزيارات واللقاءات",
-    visitesTitle: "احجزوا زيارتكم الخاصة للروضة",
+    visitesTitle: "احجزوا زيارتكم الخاصة للحضانة",
     visitesSubtitle: "يسعدنا أن نرحب بكم لاكتشاف مقرنا وفريقنا التربوي. اختاروا التوقيت الأنسب لكم (الثلاثاء والخميس على الساعة 16:00 أو 16:30).",
     visitesStepTitle: "اختيار سريع لموعدكم المفضل:",
     visitesChooseDay: "1. اختاروا اليوم:",
@@ -712,14 +712,14 @@ export const translations = {
     // Contact Section
     contactBadge: "في خدمتكم",
     contactTitle: "تواصلوا معنا",
-    contactSubtitle: "فريق روضة Au jardin des anges على أتم الاستعداد لمناقشة احتياجاتكم والترحيب بكم.",
+    contactSubtitle: "فريق AU JARDIN DES ANGES على أتم الاستعداد لمناقشة احتياجاتكم والترحيب بكم.",
     callUsDirectly: "اتصلوا بنا مباشرة",
     phoneSchedule: "من الاثنين إلى الجمعة · استقبال هاتفي دافئ وودود",
     igHandleText: "@au.jardin.des.anges",
     igSubtext: "تابعوا أنشطة وكواليس الروضة يومياً على إنستغرام",
     locationTitle: "الموقع والوصول",
-    locationHeading: "موقع الروضة والحضانة الخاصة",
-    locationText: "Au jardin des anges — روضة وحضانة خاصة للأطفال\nموقع هادئ، آمن ومحاط بالأشجار، مصمم لرفاهية الأطفال.",
+    locationHeading: "موقع الحضانة الخاصة",
+    locationText: "AU JARDIN DES ANGES — حضانة خاصة للأطفال\nموقع هادئ، آمن ومحاط بالأشجار، مصمم لرفاهية الأطفال.",
     visitesHeader: "زيارات بموعد مسبق",
     visitesSubtext: "يومي الثلاثاء والخميس\nالأوقات المتاحة: 16:00 أو 16:30",
     mapHeader: " الخريطة والموقع",
@@ -730,7 +730,7 @@ export const translations = {
     footerNavTitle: "روابط سريعة",
     footerContactTitle: "الاتصال المباشر",
     footerDesc: "واحة سلام مخصصة للطفولة المبكرة. أمان عاطفي، إيقاظ حسي ورعاية يومية شاملة.",
-    copyright: "روضة Au jardin des anges — روضة وحضانة خاصة. جميع الحقوق محفوظة.",
+    copyright: "AU JARDIN DES ANGES — حضانة خاصة. جميع الحقوق محفوظة.",
     footerHeart: "صنع بمحبة لرفاهية الأطفال الصغار."
   }
 };
