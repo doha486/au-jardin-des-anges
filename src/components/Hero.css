@@ -42,14 +42,19 @@
   background-color: var(--gold-soft);
 }
 
+/* Hero container MUST stay strictly column & centered in ALL languages */
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   gap: 2rem;
-  text-align: center;
+  text-align: center !important;
   position: relative;
   z-index: 2;
+}
+
+[dir="rtl"] .hero-container {
+  text-align: center !important;
 }
 
 /* Cherubs Illustration Container */
@@ -87,6 +92,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 780px;
+  width: 100%;
 }
 
 .hero-title {
@@ -101,6 +107,7 @@
 
 [dir="rtl"] .hero-title {
   font-family: var(--font-title) !important;
+  direction: ltr;
 }
 
 @media (min-width: 768px) {
@@ -124,12 +131,15 @@
   font-style: italic;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1.2rem;
 }
 
 [dir="rtl"] .hero-slogan {
   font-family: var(--font-arabic);
+  direction: rtl;
+  justify-content: center !important;
 }
 
 @media (min-width: 768px) {
@@ -148,6 +158,7 @@
 .subtitle-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.45rem 1.2rem;
   background-color: var(--bg-card);
@@ -226,6 +237,7 @@
 .instagram-hero-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
   border-radius: var(--radius-full);

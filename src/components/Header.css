@@ -19,11 +19,18 @@
   padding: 0.55rem 0;
 }
 
+/* Header container MUST stay strictly LTR (Brand Left, Actions Right) in ALL languages */
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
   gap: 0.5rem;
+  width: 100%;
+}
+
+[dir="rtl"] .header-container {
+  direction: ltr !important;
 }
 
 .brand-link {
@@ -37,6 +44,11 @@
 .brand-text {
   display: flex;
   flex-direction: column;
+}
+
+[dir="rtl"] .brand-text {
+  direction: ltr;
+  text-align: left;
 }
 
 .brand-title {
@@ -133,10 +145,15 @@
 }
 
 .header-actions {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
   gap: 0.45rem;
   flex-shrink: 0;
+}
+
+[dir="rtl"] .header-actions {
+  direction: ltr !important;
 }
 
 @media (max-width: 480px) {
