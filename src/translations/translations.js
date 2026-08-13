@@ -204,7 +204,7 @@ export const translations = {
     // Visites Section (Appointments)
     visitesBadge: "Visites & Rencontres",
     visitesTitle: "Réservez Votre Visite Privée",
-    visitesSubtitle: "Nous avons hâte de vous faire découvrir nos locaux et notre équipe. Sélectionnez le créneau qui vous convient le mieux (Mardi & Jeudi à 16h00 ou 16h30).",
+    visitesSubtitle: "Nous serons ravis de vous accueillir pour vous faire découvrir notre crèche, rencontrer notre équipe et échanger avec vous. Sélectionnez le créneau qui vous convient le mieux (Mardi & Jeudi à 16h00 ou 16h30).",
     visitesStepTitle: "Sélection rapide de votre créneau préféré :",
     visitesChooseDay: "1. Choisissez le jour :",
     visitesChooseTime: "2. Choisissez l'heure :",
@@ -449,7 +449,7 @@ export const translations = {
     // Visites Section
     visitesBadge: "Visits & Tours",
     visitesTitle: "Book Your Private Tour",
-    visitesSubtitle: "We look forward to introducing you to our facility and staff. Select the time slot that suits you best (Tuesday & Thursday at 4:00 PM or 4:30 PM).",
+    visitesSubtitle: "We would be delighted to welcome you to discover our daycare, meet our team, and discuss your needs. Select the time slot that suits you best (Tuesday & Thursday at 4:00 PM or 4:30 PM).",
     visitesStepTitle: "Quick selection of your preferred slot:",
     visitesChooseDay: "1. Choose day:",
     visitesChooseTime: "2. Choose time:",
@@ -694,7 +694,7 @@ export const translations = {
     // Visites Section
     visitesBadge: "الزيارات واللقاءات",
     visitesTitle: "احجزوا زيارتكم الخاصة للحضانة",
-    visitesSubtitle: "يسعدنا أن نرحب بكم لاكتشاف مقرنا وفريقنا التربوي. اختاروا التوقيت الأنسب لكم (الثلاثاء والخميس على الساعة 16:00 أو 16:30).",
+    visitesSubtitle: "يسعدنا ويشرفنا استقبالكم لاكتشاف حضانتنا، والتعرف على فريقنا التربوي والتواصل معكم. اختاروا التوقيت الأنسب لكم (الثلاثاء والخميس على الساعة 16:00 أو 16:30).",
     visitesStepTitle: "اختيار سريع لموعدكم المفضل:",
     visitesChooseDay: "1. اختاروا اليوم:",
     visitesChooseTime: "2. اختاروا التوقيت:",
